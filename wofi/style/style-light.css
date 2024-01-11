@@ -1,0 +1,50 @@
+window {
+    font-size: 20px;
+    background-color: #F7F7F7;
+    background-repeat: no-repeat;
+    color: #2E3349;
+    border: 2px solid #5F6273;
+    /* backdrop-filter: blur(15px); */
+}
+
+#entry{
+    padding: 4px 10px;
+}
+
+#entry:selected {
+    background-color: rgba(152, 174, 211, 0.479);
+    outline: none;
+    border: none;
+}
+
+#test {
+    color: rgba(152, 174, 211, 0.479);
+}
+
+#text:selected {
+    color: #14151e;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#input {
+    padding: 5px 15px;
+    margin: 15px 10px;
+    background-color: rgba(152, 173, 211, 0.26);
+    color: #2E3349;
+    font-weight: 700;
+    border: none;
+}
+
+#inner-box {
+    margin: 5px;
+    color: #2E3349;
+    font-weight: bold;
+    /* background-color: rgba(20, 21, 30, 0.6); */
+}
+
+#outer-box {
+    margin: 0px;
+    border: none;
+    background-color: #F7F7F7;
+}

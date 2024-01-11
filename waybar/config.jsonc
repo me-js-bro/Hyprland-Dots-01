@@ -1,0 +1,243 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 20,
+    "margin-top": -5,
+    "modules-left": ["custom/launch_wofi","hyprland/workspaces","cpu","memory","disk"],
+    "modules-center": ["wlr/taskbar"],
+    "modules-right": ["tray", "custom/updater", "custom/light_dark", "custom/ibus", "pulseaudio","pulseaudio#microphone", "network", "clock","custom/power_btn"],
+    
+
+    "wlr/taskbar": {
+		"format": "{icon}",
+		"icon-size": 18,
+		"icon-theme": "Tela-circle-dracula",
+        "spacing": 0,
+		"tooltip-format": "{title}",
+		"on-click": "activate",
+		"on-click-middle": "close",
+		"app_ids-mapping": {
+			"firefoxdeveloperedition": "firefox-developer-edition"
+		}
+	},
+
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "󰤨 {essid}",
+        "format-ethernet": "󱘖 Wired",
+        "tooltip-format": "󱘖 {ifname} (No IP)",
+        "format-linked": "󱘖 {ifname} (No IP)",
+        "format-disconnected": " Disconnected",
+        "format-alt": " {bandwidthUpBytes}  {bandwidthDownBytes}",
+        "interval": 5
+    },
+
+
+    "hyprland/window": {
+        "format": "{}"
+    },
+
+    "custom/ibus": {
+        "format": "{}󰙏",
+        "exec": "sleep 0.1s && cat ~/.cache/ibus-layout",
+        "on-click": "exec ~/.config/hypr/scripts/ibustoggle.sh",
+        "interval": 3,
+        "tooltip": false
+    },
+
+    "custom/launch_wofi": {
+        "format": "",
+        "on-click": "pkill wofi; wofi -n",
+        "tooltip": false
+    },
+
+    "custom/lock_screen": {
+        "format": "",
+        "on-click": "sh -c '(sleep 0.5s; swaylock)' & disown",
+        "tooltip": false
+    },
+
+    "custom/light_dark": {
+        "format": "󰐾",
+        "on-click": "~/.config/hypr/scripts/baraction light",
+        "tooltip": false
+    },
+
+    "custom/power_btn": {
+        "format": "",
+        "on-click": "sh -c '(wlogout)' & disown",
+        "tooltip": false
+    },
+
+    "cpu": {
+        "interval": 10,
+        // "format": "󰍛 {usage}%",
+        "format": "{icon0}{icon1}{icon2}{icon3} {usage}%",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+    },
+
+    "disk": {
+        "interval": 30,
+        "format": " {free}",
+        "path": "/",
+        "tooltip": true,
+        "tooltip-format": "HDD - {used} used out of {total} on {path} ({percentage_used}%)",
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "󰾅 {used}GB",
+        // "format-alt": "󰾅 {used}GB",
+        "max-length": 10,
+        "tooltip": true,
+        "tooltip-format": " {used:0.1f}GB/{total:0.1f}GB"
+    },
+
+    "custom/updater": {
+        "exec": "~/.config/hypr/scripts/systemupdate.sh",
+        "return-type": "json",
+        "format": "󰮯 {}",
+        "on-click": "~/.config/hypr/scripts/systemupdate.sh up",
+        "interval": 300, // once every day
+        "tooltip": true
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        },
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": []
+        }
+    },
+
+     "custom/cava": {
+         "exec": "~/.config/hypr/scripts/cava.sh",
+         "on-click": "kitty --title cava sh -c 'cava'",
+            "framerate": 60
+     },
+    
+    "custom/power_profile": {
+        //shows the current power profile and switches to next on click
+        "exec": "asusctl profile -p | sed s:'Active profile is'::",
+        "interval": 30,
+        "format": "󰈐{}", 
+        "on-click": "asusctl profile -n; pkill -SIGRTMIN+8 waybar",
+        "signal": 8
+    },
+
+   "custom/weather": {
+    "format": " {}",
+    "format-alt": "{alt}: {}",
+    "format-alt-click": "click",
+    "interval": 3600,
+    "return-type": "json",
+    "exec": "~/.config/hypr/scripts/Weather.sh",
+    //"exec": "~/.config/waybar/scripts/Weather.py",
+    "exec-if": "ping wttr.in -c1",
+    "tooltip" : true
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+
+    "clock": {
+        "format": " {: %I:%M %p}",
+        "format-alt": "{: %d-%m-%Y}",
+        "on-clock-right": "exec gnome-calendar",
+        "tooltip": true,
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode"          : "year",
+            "mode-mon-col"  : 3,
+            "weeks-pos"     : "right",
+            "on-scroll"     : 1,
+            "format": {
+            "months":     "<span color='#ffead3'><b>{}</b></span>",
+            "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+            "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+            "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+            "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                    }
+                    }
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "on-scroll-up": "brightnessctl set 1%+",
+        "on-scroll-down": "brightnessctl set 1%-",
+        "min-length": 6
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "on-click": "pamixer -t",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "~/.config/hypr/scripts/volumecontrol.sh -o i",
+        "on-scroll-down": "~/.config/hypr/scripts/volumecontrol.sh -o d",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        }
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "on-click": "pamixer --default-source -t",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "pamixer --default-source -i 5",
+        "on-scroll-down": "pamixer --default-source -d 5",
+        "scroll-step": 5
+    },
+    
+    "temperature": {
+        "thermal-zone": 1,
+        "format": " {temperatureC}°C",
+        "critical-threshold": 70,
+        "format-critical": " {temperatureF}°F",
+        "on-click": "kitty --title btop sh -c 'btop'"
+    }
+}
