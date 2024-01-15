@@ -9,7 +9,7 @@
     "margin-top": -5,
     "modules-left": ["custom/launch_wofi","hyprland/workspaces","cpu","memory","disk"],
     "modules-center": ["wlr/taskbar"],
-    "modules-right": ["tray", "custom/updater", "custom/light_dark", "custom/ibus", "pulseaudio","pulseaudio#microphone", "network", "clock","custom/power_btn"],
+    "modules-right": ["tray", "custom/cava", "custom/updater", "custom/light_dark", "custom/ibus", "pulseaudio","pulseaudio#microphone", "network", "clock","custom/power_btn"],
     
 
     "wlr/taskbar": {
@@ -63,7 +63,7 @@
 
     "custom/light_dark": {
         "format": "󰐾",
-        "on-click": "~/.config/hypr/scripts/baraction light",
+        "on-click": "~/.config/hypr/scripts/toggle_dark_light.sh light",
         "tooltip": false
     },
 
@@ -110,21 +110,28 @@
         "disable-scroll": true,
         "all-outputs": true,
         "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch workspace e-1",
+        "on-scroll-down": "hyprctl dispatch workspace e+1",
         "format": "{icon}",
+        // "format-icons": {
+        //     "1": "",
+        //     "2": "",
+        //     "3": "",
+        //     "4": "",
+        //     "urgent": "",
+        //     "focused": "",
+        //     "default": ""
+        // },
         "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "urgent": "",
-            "focused": "",
-            "default": ""
-        },
+            "active": "󰮯",
+            "default": ""
+          },
         "persistent-workspaces": {
             "1": [],
             "2": [],
             "3": [],
-            "4": []
+            "4": [],
+            "5": []
         }
     },
 

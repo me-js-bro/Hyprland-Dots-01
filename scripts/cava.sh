@@ -15,7 +15,7 @@ done
 config_file="/tmp/waybarbar_cava_config"
 echo "
 [general]
-bars = 20
+bars = 8
 
 [input]
 method = pipewire
