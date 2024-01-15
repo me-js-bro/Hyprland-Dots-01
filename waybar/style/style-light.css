@@ -96,6 +96,7 @@ tooltip label{
 #cpu,
 #disk,
 #custom-updates,
+#custom-clipboard,
 #memory,
 #clock,
 #battery,
@@ -113,6 +114,16 @@ tooltip label{
     margin: 3px 0px;
     margin-top: 10px;
     border: 0px;
+}
+
+#custom-clipboard {
+    border-radius: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+#custom-power_btn {
+    color: red;
 }
 
 #taskbar{

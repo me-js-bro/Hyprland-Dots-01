@@ -2,10 +2,15 @@
 
 # Check which waybar theme is set
 THEMEIS=$(readlink -f ~/.config/waybar/style.css | cut -d '-' -f2)
+rofi=$(readlink -f ~/.config/rofi/config.rasi | cut -d '-' -f2)
 
 #if the theme is not dark then we need to switch to it
 if [ $THEMEIS != "light.css" ]; then
     SWITCHTO="-light"
+fi
+
+if [ $rofi != "light.rasi" ]; then
+    switch_to="-light"
 fi
 
 #change the background image and be cool about it ;)
@@ -20,6 +25,9 @@ gsettings set org.gnome.desktop.interface gtk-theme "theme$SWITCHTO"
 
 #set the wofi theme
 ln -sf ~/.config/wofi/style/style$SWITCHTO.css ~/.config/wofi/style.css
+
+#set rofi theme
+ln -sf ~/.config/rofi/themes/config$switch_to.rasi ~/.config/rofi/config.rasi
 
 #set the waybar theme
 ln -sf ~/.config/waybar/style/style$SWITCHTO.css ~/.config/waybar/style.css

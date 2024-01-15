@@ -9,7 +9,7 @@
     "margin-top": -5,
     "modules-left": ["custom/launch_wofi","hyprland/workspaces","cpu","memory","disk"],
     "modules-center": ["wlr/taskbar"],
-    "modules-right": ["tray", "custom/cava", "custom/updater", "custom/light_dark", "custom/ibus", "pulseaudio","pulseaudio#microphone", "network", "clock","custom/power_btn"],
+    "modules-right": ["tray", "custom/cava", "custom/updater", "custom/light_dark", "custom/ibus", "pulseaudio","pulseaudio#microphone", "custom/clipboard", "network", "clock","custom/power_btn"],
     
 
     "wlr/taskbar": {
@@ -139,6 +139,12 @@
          "exec": "~/.config/hypr/scripts/cava.sh",
          "on-click": "kitty --title cava sh -c 'cava'",
             "framerate": 60
+     },
+
+     "custom/clipboard": {
+        "format": "󰅌",
+        "on-click": "~/.config/hypr/scripts/cliphist.sh c",
+        "on-click-right": "~/.config/hypr/scripts/cliphist.sh w"
      },
     
     "custom/power_profile": {
