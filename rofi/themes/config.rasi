@@ -1,5 +1,5 @@
 * {
-    font: "Figtree 13";
+    font: "JetBrainsMono Nerd Font";
     g-spacing: 10px;
     g-margin: 0;
     b-color: #18202AFF;
@@ -111,6 +111,5 @@ element selected.normal {
 }
 
 message {
-    background-color: red;
-    border: 0px solid;
+    background-color: @fg-color;
 }
