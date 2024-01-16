@@ -14,7 +14,7 @@ family = "JetBrainsMono Nerd Font"
 [window]
 startup_mode = "Windowed"
 dynamic_padding = true
-opacity = 1.0
+opacity = 0.9
 
 [window.padding]
 x = 10
