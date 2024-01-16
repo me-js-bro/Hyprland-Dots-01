@@ -9,7 +9,7 @@
     "margin-top": -5,
     "modules-left": ["custom/launch_wofi","hyprland/workspaces","cpu","memory","disk"],
     "modules-center": ["wlr/taskbar"],
-    "modules-right": ["tray", "custom/cava", "custom/updater", "custom/light_dark", "custom/ibus", "pulseaudio","pulseaudio#microphone", "custom/clipboard", "network", "clock","custom/power_btn"],
+    "modules-right": ["tray", "custom/cava", "custom/updater", "custom/light_dark","custom/wallpaper-change","custom/clipboard", "custom/ibus", "pulseaudio","pulseaudio#microphone", "network", "clock","custom/power_btn"],
     
 
     "wlr/taskbar": {
@@ -145,6 +145,12 @@
         "format": "󰅌",
         "on-click": "~/.config/hypr/scripts/cliphist.sh c",
         "on-click-right": "~/.config/hypr/scripts/cliphist.sh w"
+     },
+
+     "custom/wallpaper-change": {
+        "format": "󰸉",
+        "on-click": "exec ~/.config/hypr/scripts/Wallpaper.sh",
+        "on-click-right": "~/.config/hypr/scripts/WallpaperSelect.sh"
      },
     
     "custom/power_profile": {
