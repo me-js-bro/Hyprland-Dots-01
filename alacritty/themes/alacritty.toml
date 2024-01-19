@@ -17,8 +17,8 @@ dynamic_padding = true
 opacity = 0.9
 
 [window.padding]
-x = 10
-y = 10
+x = 15
+y = 15
 
 #[window.dimensions]
 #columns = 90
