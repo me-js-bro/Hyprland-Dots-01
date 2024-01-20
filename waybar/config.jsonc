@@ -7,9 +7,9 @@
     "gtk-layer-shell": true,
     "height": 20,
     "margin-top": -5,
-    "modules-left": ["custom/launch_wofi","hyprland/workspaces","cpu","memory","disk"],
+    "modules-left": ["custom/launch_wofi","hyprland/workspaces","cpu","memory","disk", "custom/cava"],
     "modules-center": ["wlr/taskbar"],
-    "modules-right": ["tray", "custom/cava", "custom/updater", "custom/light_dark","custom/wallpaper-change","custom/clipboard", "custom/ibus", "pulseaudio","pulseaudio#microphone", "network", "clock","custom/power_btn"],
+    "modules-right": ["tray", "custom/updater", "custom/light_dark","custom/wallpaper-change","custom/clipboard", "custom/ibus", "pulseaudio","pulseaudio#microphone", "network", "clock","custom/power_btn"],
     
 
     "wlr/taskbar": {
