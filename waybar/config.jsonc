@@ -55,6 +55,74 @@
         "tooltip": false
     },
 
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch workspace e-1",
+        "on-scroll-down": "hyprctl dispatch workspace e+1",
+        "format": "{icon}",
+        // "format-icons": {
+        //     "1": "",
+        //     "2": "",
+        //     "3": "",
+        //     "4": "",
+        //     "urgent": "",
+        //     "focused": "",
+        //     "default": ""
+        // },
+        "format-icons": {
+            "active": "󰮯",
+            "default": ""
+          },
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        }
+    },
+
+
+    // ----------- Uncomment these 2 modules below and comment upper 2 modules for fedora linux. ----------- \\
+
+
+    // "custom/launch_wofi": {
+    //     "format": "󰣛",
+    //     "on-click": "pkill wofi; wofi -n",
+    //     "tooltip": false
+    // },
+
+    // "hyprland/workspaces": {
+    //     "disable-scroll": true,
+    //     "all-outputs": true,
+    //     "on-click": "activate",
+    //     "on-scroll-up": "hyprctl dispatch workspace e-1",
+    //     "on-scroll-down": "hyprctl dispatch workspace e+1",
+    //     "format": "{icon}",
+    //     // "format-icons": {
+    //     //     "1": "",
+    //     //     "2": "",
+    //     //     "3": "",
+    //     //     "4": "",
+    //     //     "urgent": "",
+    //     //     "focused": "",
+    //     //     "default": ""
+    //     // },
+    //     "format-icons": {
+    //         "active": "󰣛",
+    //         "default": ""
+    //       },
+    //     "persistent-workspaces": {
+    //         "1": [],
+    //         "2": [],
+    //         "3": [],
+    //         "4": [],
+    //         "5": []
+    //     }
+    // },
+
     "custom/lock_screen": {
         "format": "",
         "on-click": "sh -c '(sleep 0.5s; swaylock)' & disown",
@@ -104,35 +172,6 @@
         "on-click": "~/.config/hypr/scripts/systemupdate.sh up",
         "interval": 300, // once every day
         "tooltip": true
-    },
-
-    "hyprland/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "on-click": "activate",
-        "on-scroll-up": "hyprctl dispatch workspace e-1",
-        "on-scroll-down": "hyprctl dispatch workspace e+1",
-        "format": "{icon}",
-        // "format-icons": {
-        //     "1": "",
-        //     "2": "",
-        //     "3": "",
-        //     "4": "",
-        //     "urgent": "",
-        //     "focused": "",
-        //     "default": ""
-        // },
-        "format-icons": {
-            "active": "󰮯",
-            "default": ""
-          },
-        "persistent-workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": []
-        }
     },
 
      "custom/cava": {
