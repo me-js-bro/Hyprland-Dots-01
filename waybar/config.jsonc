@@ -7,9 +7,9 @@
     "gtk-layer-shell": true,
     "height": 20,
     "margin-top": -5,
-    "modules-left": ["custom/launch_wofi","hyprland/workspaces","cpu","memory","disk"],
+    "modules-left": ["custom/launch_wofi","hyprland/workspaces","cpu","memory","disk", "custom/cava"],
     "modules-center": ["wlr/taskbar"],
-    "modules-right": ["tray", "custom/updater", "custom/light_dark", "custom/ibus", "pulseaudio","pulseaudio#microphone", "network", "clock","custom/power_btn"],
+    "modules-right": ["tray", "custom/updater", "custom/light_dark","custom/wallpaper-change", "custom/ibus", "pulseaudio","pulseaudio#microphone", "network", "clock","custom/power_btn"],
     
 
     "wlr/taskbar": {
@@ -55,6 +55,74 @@
         "tooltip": false
     },
 
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch workspace e-1",
+        "on-scroll-down": "hyprctl dispatch workspace e+1",
+        "format": "{icon}",
+        // "format-icons": {
+        //     "1": "",
+        //     "2": "",
+        //     "3": "",
+        //     "4": "",
+        //     "urgent": "",
+        //     "focused": "",
+        //     "default": ""
+        // },
+        "format-icons": {
+            "active": "󰮯",
+            "default": ""
+          },
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        }
+    },
+
+
+    // ----------- Uncomment these 2 modules below and comment upper 2 modules for fedora linux. ----------- \\
+
+
+    // "custom/launch_wofi": {
+    //     "format": "󰣛",
+    //     "on-click": "pkill wofi; wofi -n",
+    //     "tooltip": false
+    // },
+
+    // "hyprland/workspaces": {
+    //     "disable-scroll": true,
+    //     "all-outputs": true,
+    //     "on-click": "activate",
+    //     "on-scroll-up": "hyprctl dispatch workspace e-1",
+    //     "on-scroll-down": "hyprctl dispatch workspace e+1",
+    //     "format": "{icon}",
+    //     // "format-icons": {
+    //     //     "1": "",
+    //     //     "2": "",
+    //     //     "3": "",
+    //     //     "4": "",
+    //     //     "urgent": "",
+    //     //     "focused": "",
+    //     //     "default": ""
+    //     // },
+    //     "format-icons": {
+    //         "active": "󰣛",
+    //         "default": ""
+    //       },
+    //     "persistent-workspaces": {
+    //         "1": [],
+    //         "2": [],
+    //         "3": [],
+    //         "4": [],
+    //         "5": []
+    //     }
+    // },
+
     "custom/lock_screen": {
         "format": "",
         "on-click": "sh -c '(sleep 0.5s; swaylock)' & disown",
@@ -63,7 +131,7 @@
 
     "custom/light_dark": {
         "format": "󰐾",
-        "on-click": "~/.config/hypr/scripts/baraction light",
+        "on-click": "~/.config/hypr/scripts/toggle_dark_light.sh light",
         "tooltip": false
     },
 
@@ -106,32 +174,22 @@
         "tooltip": true
     },
 
-    "hyprland/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "on-click": "activate",
-        "format": "{icon}",
-        "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "urgent": "",
-            "focused": "",
-            "default": ""
-        },
-        "persistent-workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": []
-        }
-    },
-
      "custom/cava": {
          "exec": "~/.config/hypr/scripts/cava.sh",
          "on-click": "kitty --title cava sh -c 'cava'",
             "framerate": 60
+     },
+
+     "custom/clipboard": {
+        "format": "󰅌",
+        "on-click": "~/.config/hypr/scripts/cliphist.sh c",
+        "on-click-right": "~/.config/hypr/scripts/cliphist.sh w"
+     },
+
+     "custom/wallpaper-change": {
+        "format": "󰸉",
+        "on-click": "exec ~/.config/hypr/scripts/Wallpaper.sh",
+        "on-click-right": "~/.config/hypr/scripts/WallpaperSelect.sh"
      },
     
     "custom/power_profile": {

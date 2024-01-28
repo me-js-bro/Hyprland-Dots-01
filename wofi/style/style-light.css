@@ -3,7 +3,7 @@ window {
     background-color: #F7F7F7;
     background-repeat: no-repeat;
     color: #2E3349;
-    border: 2px solid #5F6273;
+    /* border: 2px solid #5F6273; */
     /* backdrop-filter: blur(15px); */
 }
 
