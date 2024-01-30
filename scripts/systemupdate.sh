@@ -1,24 +1,23 @@
 #!/usr/bin/env bash
 
-# source variables
-ScrDir=`dirname $(realpath $0)`
-source $ScrDir/globalcontrol.sh
-
-# Check for updates
-get_aurhlpr
-aur=`${aurhlpr} -Qua | wc -l`
-
-# Check for flatpak updates
-if pkg_installed flatpak ; then
-    fpk=`flatpak remote-ls --updates | wc -l`
-    fpk_disp="\n󰏓 Flatpak $fpk"
-    fpk_exup="; flatpak update"
-else
-    fpk=0
-    fpk_disp=""
-fi
-
 if [ -f /etc/arch-release ]; then
+    # source variables
+    ScrDir=`dirname $(realpath $0)`
+    source $ScrDir/globalcontrol.sh
+
+    # Check for updates
+    get_aurhlpr
+    aur=`${aurhlpr} -Qua | wc -l`
+
+    # Check for flatpak updates
+    if pkg_installed flatpak ; then
+        fpk=`flatpak remote-ls --updates | wc -l`
+        fpk_disp="\n󰏓 Flatpak $fpk"
+        fpk_exup="; flatpak update"
+    else
+        fpk=0
+        fpk_disp=""
+    fi
     ofc=`checkupdates | wc -l`
 
     # Calculate total available updates
@@ -33,7 +32,11 @@ if [ -f /etc/arch-release ]; then
 
     update_packages() {
         kitty --title systemupdate sh -c "${aurhlpr} -Syu $fpk_exup"
-        dunstify "Packages updated successfully!"
+        if [ $upd -eq 0 ] ; then
+            dunstify "Packages updated successfully!"
+        else
+            dunstify "Couldnot update your packages."
+        fi
 }
 
 elif [ -f /etc/fedora-release ]; then
@@ -51,8 +54,42 @@ elif [ -f /etc/fedora-release ]; then
 
     update_packages() {
         kitty --title systemupdate sh -c "sudo dnf update -y"
-        dunstify "Packages updated successfully!"
+        if [ $upd -eq 0 ] ; then
+            dunstify "Packages updated successfully!"
+        else
+            dunstify "Couldnot update your packages."
+        fi
 }
+
+elif [ -f /etc/os-release ]; then
+    source /etc/os-release
+    if [[ $ID == "opensuse-tumbleweed" ]]; then
+        # Use zypper list-updates to get the list of available updates
+        updates=$(zypper lu)
+
+        # Count the number of available updates
+        ofc=$(echo "$updates" | grep -c "v |")
+
+        # Calculate total available updates
+        upd=$(( ofc ))
+
+        # Show tooltip
+        if [ $upd -eq 0 ] ; then
+            echo "{\"text\":\"$upd\", \"tooltip\":\" Packages are up to date\"}"
+        else
+            echo "{\"text\":\"$upd\", \"tooltip\":\"󱓽 Updates $ofc\n\"}"
+        fi
+
+        update_packages() {
+                kitty --title systemupdate sh -c "sudo zypper up"
+                
+                if [ $upd -eq 0 ] ; then
+                    dunstify "Packages updated successfully!"
+                else
+                    dunstify "Couldnot update your packages."
+                fi
+        }
+    fi
 
 fi
 
