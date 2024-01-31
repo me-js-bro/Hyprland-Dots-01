@@ -2,8 +2,6 @@
 
 # Check which waybar theme is set
 THEMEIS=$(readlink -f ~/.config/waybar/style.css | cut -d '-' -f2)
-rofi=$(readlink -f ~/.config/rofi/config.rasi | cut -d '-' -f2)
-alacritty=$(readlink -f ~/.config/alacritty/alacritty.toml | cut -d '-' -f2)
 
 # vs code settings
 vs_code_settings=~/.config/Code/User/settings.json
@@ -33,6 +31,9 @@ ln -sf ~/.config/waybar/style/style$SWITCHTO.css ~/.config/waybar/style.css
 
 # change alacritty theme
 ln -sf ~/.config/alacritty/themes/alacritty$SWITCHTO.toml ~/.config/alacritty/alacritty.toml
+
+# change kitty theme
+ln -sf ~/.config/kitty/themes/kitty$SWITCHTO.conf ~/.config/kitty/kitty.conf
 
 # change vs code theme
 if [ $THEMEIS != "light.css" ]; then
