@@ -16,12 +16,10 @@ window#waybar {
 }
 
 tooltip {
-    background: #18202A;
+    background: #08080A;
     opacity: 0.8;
     border-radius: 5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #9DB8C1;
+    border: 1px solid #9DB8C1;
 }
 
 tooltip label{
@@ -35,7 +33,7 @@ tooltip label{
 }
 
 #workspaces button.active {
-    color: #71ff90;
+    color: #b8bfdd;
 }
 
 #workspaces button.focused {
@@ -142,10 +140,6 @@ tooltip label{
     border-left: none;
 }
 
-#custom-power_btn {
-    color: red;
-}
-
 #taskbar{
     border-radius: 5px;
 }
@@ -184,7 +178,9 @@ tooltip label{
 }
 
 #custom-power_btn {
-    padding-right: 15px;
+    padding: 0 15px 2px 15px;
+    color: red;
+    border-left: none;
 }
 
 #custom-light_dark {
@@ -225,7 +221,7 @@ tooltip label{
 }
 
 #custom-launch_wofi {
-    color: #71ff90;
+    color: #89b4fa;
     font-size: 20px;
     padding-right: 20px;
     margin-left: 10px;
