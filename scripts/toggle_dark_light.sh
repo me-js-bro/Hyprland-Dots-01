@@ -1,13 +1,17 @@
 #!/bin/sh
 
 # Check which waybar theme is set
-THEMEIS=$(readlink -f ~/.config/waybar/style.css | cut -d '-' -f2)
+rofi=$(readlink -f ~/.config/rofi/config.rasi | cut -d '-' -f2)
+alacritty=$(readlink -f ~/.config/alacritty/alacritty.toml | cut -d '-' -f2)
+
+# waybar
+waybar_style=$(readlink -f ~/.config/waybar/style.css | cut -d '-' -f2)
 
 # vs code settings
 vs_code_settings=~/.config/Code/User/settings.json
 
 #if the theme is not dark then we need to switch to it
-if [ $THEMEIS != "light.css" ]; then
+if [ $rofi != "light.rasi" ]; then
     SWITCHTO="-light"
 fi
 
@@ -26,20 +30,14 @@ ln -sf ~/.config/wofi/style/style$SWITCHTO.css ~/.config/wofi/style.css
 #set rofi theme
 ln -sf ~/.config/rofi/themes/config$SWITCHTO.rasi ~/.config/rofi/config.rasi
 
-#set the waybar theme
-ln -sf ~/.config/waybar/style/style$SWITCHTO.css ~/.config/waybar/style.css
-
 # change alacritty theme
 ln -sf ~/.config/alacritty/themes/alacritty$SWITCHTO.toml ~/.config/alacritty/alacritty.toml
 
-# change kitty theme
-ln -sf ~/.config/kitty/themes/kitty$SWITCHTO.conf ~/.config/kitty/kitty.conf
-
 # change vs code theme
-if [ $THEMEIS != "light.css" ]; then
-    sed -i 's/"workbench.colorTheme": "Theme Flat"/"workbench.colorTheme": "Atom One Light"/g' "$vs_code_settings"
+if [ $rofi != "light.rasi" ]; then
+    sed -i 's/"Theme Flat"/"Atom One Light"/g' "$vs_code_settings"
 else
-    sed -i 's/"workbench.colorTheme": "Atom One Light"/"workbench.colorTheme": "Theme Flat"/g' "$vs_code_settings"
+    sed -i 's/"Atom One Light"/"Theme Flat"/g' "$vs_code_settings"
 fi
 
 #restart the waybar

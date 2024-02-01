@@ -1,0 +1,21 @@
+{
+    "include": "$HOME/.config/hypr/waybar/modules",
+    "layer": "top",
+    "position": "bottom",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": -10,
+    "margin-bottom": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "padding-top": 5,
+    "padding-bottom": 5,
+
+    "modules-left": ["custom/light_dark", "custom/wallpaper-change", "custom/ibus",  "custom/updater", "wlr/taskbar"],
+
+    "modules-center": ["custom/cava"],
+
+    "modules-right": ["tray", "pulseaudio","pulseaudio#microphone", "network", "clock", "custom/power_btn"]
+}

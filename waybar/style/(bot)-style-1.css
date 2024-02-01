@@ -1,43 +1,45 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: "JetBrainsMono Nerd Font", "MesloLGS Nerd Font", "Font Awesome";
     font-weight: bold;
     font-size: 13px;
     min-height: 0;
 }
 
+/* #18202A */
+
 window#waybar {
-    background: rgba(21, 18, 27, 0);
-    color: #2b2b2c;
+    background: rgba(24, 32, 42, 0);
+    color: #9DB8C1;
 }
 
 tooltip {
-    background: #e7e7ec;;
+    background: #18202A;
     opacity: 0.8;
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
-    border-color: #11111b;
+    border-color: #9DB8C1;
 }
 
 tooltip label{
-    color: #2b2b2c;
+    color: #9DB8C1;
 }
 
 #workspaces button {
     padding: 5px;
-    color: #a6adc8;
-    background-color: rgba(255, 255, 255, 0);
+    color: #4f5064;
     margin-right: 5px;
+    background-color: rgba(17, 17, 27, 0);
 }
 
 #workspaces button.active {
-    color: #313244;
+    color: #b8bfdd;
 }
 
 #workspaces button.focused {
-    color: #313244;
+    color: #a6adc8;
     background: #eba0ac;
     border-radius: 10px;
 }
@@ -68,7 +70,7 @@ tooltip label{
 }
 
 #taskbar button.active {
-    background: #b9b9bd;
+    background: #324857;
     margin-left: 3px;
     padding-left: 12px;
     padding-right: 12px;
@@ -78,7 +80,7 @@ tooltip label{
 }
 
 #taskbar button:hover {
-    background: #ffffff;
+    background: #304150;
     padding-left: 3px;
     padding-right: 3px;
     animation: gradient_f 20s ease-in infinite;
@@ -109,7 +111,7 @@ tooltip label{
 #custom-ibus,
 #taskbar,
 #backlight {
-    background: #e7e7ec;
+    background: #18202A;
     opacity: 0.8;
     padding: 0px 10px;
     margin: 3px 0px;
@@ -131,12 +133,9 @@ tooltip label{
     border-radius: 0 10px 10px 0;
 }
 
-#custom-power_btn {
-    color: red;
-}
-
 #taskbar{
     border-radius: 10px;
+    margin-left: 10px;
 }
 
 #custom-ibus {
@@ -149,17 +148,17 @@ tooltip label{
     border-radius: 10px;
 }
 
-#temperature {
-    border-radius: 0 10px 10px 0;
-}
-
 #custom-updater {
     margin-right: 10px;
     border-radius: 10px;
 }
 
-#tray, #custom-lock_screen, #backlight, #custom-launch_wofi, #cpu {
+#tray, #custom-lock_screen, #temperature, #backlight, #custom-launch_wofi, #cpu {
     border-radius: 10px 0px 0px 10px;
+}
+
+#temperature {
+    border-radius: 0 10px 10px 0;
 }
 
 #tray {
@@ -167,22 +166,19 @@ tooltip label{
     border-radius: 10px;
 }
 
-#custom-power_btn {
-    padding-right: 15px;
-}
-
-#custom-light_dark, #custom-power_btn, #workspaces, #pulseaudio.microphone, #battery, #disk{
+#custom-light_dark, #custom-power_btn, #workspaces, #pulseaudio.microphone, #battery, #disk {
     border-radius: 0px 10px 10px 0px;
     margin-right: 10px;
 }
 
-#custom-weather {
-    border-radius: 10px;
-    margin-left: 10px;
+#pulseaudio.microphone, #custom-power_btn {
+    border-radius: 0px 10px 10px 0px;
 }
 
-#temperature.critical {
-    color: #e92d4d;
+#custom-power_btn {
+    border-radius: 10px;
+    color: red;
+    padding: 0 15px;
 }
 
 #custom-light_dark {
@@ -194,17 +190,23 @@ tooltip label{
     padding: 0 15px;
 }
 
-#pulseaudio, #clock {
-    border-radius: 10px 0 0 10px;
+#custom-weather {
+    border-radius: 10px;
+    margin-left: 10px;
 }
 
+#temperature.critical {
+    color: #e92d4d;
+}
+
+
 #workspaces {
-    padding-right: 0px;
+    padding-right: 5px;
     padding-left: 5px;
 }
 
 #custom-power_profile {
-    color: #1d7715;
+    color: #a6e3a1;
     border-left: 0px;
     border-right: 0px;
 }
@@ -216,31 +218,38 @@ tooltip label{
 }
 
 #custom-launch_wofi {
-    color: #407cdd;
+    color: #89b4fa;
     margin-left: 10px;
     border-right: 0px;
 }
 
 #pulseaudio {
-    /* color: #407cdd; */
+    /* color: #89b4fa; */
     border-left: 0px;
     border-right: 0px;
+    border-radius: 10px 0 0 10px;
+}
+
+#clock {
+    border-radius: 10px;
+    margin-left: 10px;
+    padding-right: 15px;
 }
 
 #pulseaudio.microphone {
-    /* color: #ad6bfd; */
+    /* color: #cba6f7; */
     border-left: 0px;
     border-right: 0px;
 }
 
 #battery {
-    color: #1d7715;
+    color: #a6e3a1;
     border-left: 0px;
 }
 
 #custom-cava {
-    background: #e7e7ec;
-    color: #2b2b2c;
+    background: #18202A;
+    color: #9DB8C1;
     opacity: 0.8;
     padding: 0px 10px;
     margin: 3px 0px;
