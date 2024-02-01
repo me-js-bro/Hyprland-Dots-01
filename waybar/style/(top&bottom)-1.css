@@ -30,6 +30,7 @@ tooltip label{
     padding: 5px;
     color: #4f5064;
     margin-right: 5px;
+    background-color: rgba(17, 17, 27, 0);
 }
 
 #workspaces button.active {
