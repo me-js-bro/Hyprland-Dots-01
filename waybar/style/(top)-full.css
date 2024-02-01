@@ -7,11 +7,17 @@
     min-height: 0;
 }
 
-/* #18202A */
+#window {
+	padding: 1px 0;
+}
 
 window#waybar {
-    background: rgba(24, 32, 42, 0);
+    background: rgba(24, 32, 42, 0.87);
     color: #9DB8C1;
+    border-bottom: 1px solid #9DB8C1;
+    padding: 0 0;
+    /* margin: 0; */
+    border-radius: 20px;
 }
 
 tooltip {
@@ -29,8 +35,9 @@ tooltip label{
 
 #workspaces button {
     padding: 5px;
-    color: #4f5064;
+    color: #9DB8C1;
     margin-right: 5px;
+    background-color: rgba(17, 17, 27, 0);
 }
 
 #workspaces button.active {
@@ -110,11 +117,12 @@ tooltip label{
 #custom-ibus,
 #taskbar,
 #backlight {
-    background: #18202A;
+    background: rgba(24, 32, 42, 0);
     opacity: 0.8;
     padding: 0px 10px;
+    /* padding-bottom: 5px; */
     margin: 3px 0px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     border: 0px;
 }
 
@@ -130,10 +138,6 @@ tooltip label{
     padding-right: 20px;
     margin-right: 10px;
     border-radius: 0 10px 10px 0;
-}
-
-#custom-power_btn {
-    color: red;
 }
 
 #taskbar{
@@ -174,16 +178,17 @@ tooltip label{
 }
 
 #custom-power_btn {
-    padding-right: 15px;
+    padding: 0 15px;
+    padding-bottom: 2px;
+    color: red;
+    border-radius: 10px;
 }
 
 #custom-light_dark {
     border-radius: 10px 0 0 10px;
-    margin-right: 0;
-}
-
-#custom-light_dark {
     padding: 0 15px;
+    padding-right: 5px;
+    margin-right: 0;
 }
 
 #custom-weather {
@@ -199,6 +204,8 @@ tooltip label{
 #workspaces {
     padding-right: 5px;
     padding-left: 5px;
+    border-radius: 10px;
+    margin-left: 10px;
 }
 
 #custom-power_profile {
@@ -227,7 +234,7 @@ tooltip label{
 }
 
 #clock {
-    border-radius: 10px 0 0 10px;
+    border-radius: 0px;
 }
 
 #pulseaudio.microphone {

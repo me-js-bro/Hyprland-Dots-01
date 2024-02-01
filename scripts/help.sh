@@ -39,13 +39,13 @@ yad --width=$dynamic_width --height=$dynamic_height \
     --timeout-indicator=bottom \
 " = " "SUPER KEY (Windows Key)" "(SUPER KEY)" \
 "" "" "" \
-" + k" "Terminal" "(Alacritty  )" \
-" + SHIFT + k" "Terminal" "(Kitty  )" \
+" + k" "Terminal" "(Kitty  )" \
+" + SHIFT + k" "Terminal" "(Alacritty  )" \
 " + D" "App Launcher" "(Wofi)" \
 " + SHIFT + D" "Emoji Selector" "(Wofi)" \
 " + CTRL + D" "App Launcher" "(Rofi)" \
-" + E" "Open File Manager" "(Dolphin)" \
-" + SHIFT + E" "Open File Manager" "(Thunar)" \
+" + E" "Open File Manager" "(Thunar)" \
+" + SHIFT + E" "Open File Manager" "(Dolphin)" \
 " + Q" "close active window" "(not kill)" \
 " + ALT + C" "Clipboard Manager" "(Cliphist)" \
 " + ALT + W" "Clear Clipboard History" "(Cliphist)" \
