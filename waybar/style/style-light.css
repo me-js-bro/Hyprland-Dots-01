@@ -85,7 +85,7 @@ tooltip label{
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
-#custom-launch_wofi,
+#custom-launch_rofi,
 #custom-lock_screen,
 #custom-light_dark,
 #custom-power_btn,
@@ -158,7 +158,7 @@ tooltip label{
     border-radius: 10px;
 }
 
-#tray, #custom-lock_screen, #backlight, #custom-launch_wofi, #cpu {
+#tray, #custom-lock_screen, #backlight, #custom-launch_rofi, #cpu {
     border-radius: 10px 0px 0px 10px;
 }
 
@@ -215,7 +215,7 @@ tooltip label{
     margin-right: 20px;
 }
 
-#custom-launch_wofi {
+#custom-launch_rofi {
     color: #407cdd;
     margin-left: 10px;
     border-right: 0px;

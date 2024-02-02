@@ -1,6 +1,5 @@
 #!/bin/sh
 
-# Check which waybar theme is set
 rofi=$(readlink -f ~/.config/rofi/config.rasi | cut -d '-' -f2)
 alacritty=$(readlink -f ~/.config/alacritty/alacritty.toml | cut -d '-' -f2)
 

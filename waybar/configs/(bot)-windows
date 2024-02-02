@@ -11,7 +11,7 @@
 
     "modules-left": ["custom/power_btn", "custom/ibus", "custom/updater"],
 
-    "modules-center": ["custom/launch_wofi", "wlr/taskbar"],
+    "modules-center": ["custom/launch_rofi", "wlr/taskbar"],
 
     "modules-right": ["tray", "custom/light_dark","custom/wallpaper-change", "pulseaudio", "network", "clock"],
 

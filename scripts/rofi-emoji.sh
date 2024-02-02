@@ -1,16 +1,7 @@
 #!/bin/bash
 
-# WOFI STYLES
-CONFIG="$HOME/.config/wofi/config"
-STYLE="$HOME/.config/hypr/wofi/style.css"
-# COLORS="$HOME/.config/hypr/wofi/colors"
-
-# wofi window config (in %)
-WIDTH=40
-HEIGHT=40
-
 sed '1,/^### DATA ###$/d' $0 | 
-wofi --show dmenu -i --conf ${CONFIG} --style ${STYLE} --color ${COLORS} --width=$WIDTH% --height=$HEIGHT% |
+rofi -dmenu -config ~/.config/hypr/rofi/themes/rofi-emoji.rasi| 
 cut -d ' ' -f 1 | tr -d '\n' | wl-copy
 
 exit

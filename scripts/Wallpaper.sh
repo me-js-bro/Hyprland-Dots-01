@@ -1,8 +1,12 @@
 #!/bin/bash
 
 DIR=$HOME/.config/hypr/Wallpaper
+SCRIPTS_DIR="$HOME/.config/hypr/scripts"
 PICS=($(find ${DIR} -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.gif" \)))
 RANDOMPICS=${PICS[ $RANDOM % ${#PICS[@]} ]}
+
+# New line to store the current wallpaper path in a file
+echo "$RANDOMPICS" > $HOME/.config/current_wallpaper
 
 change_swaybg(){
   pkill swww
@@ -46,3 +50,5 @@ case "$1" in
 		change_current
 		;;
 esac
+
+"$SCRIPTS_DIR/paywal.sh"

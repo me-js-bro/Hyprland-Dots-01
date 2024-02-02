@@ -9,7 +9,7 @@ waybar_config="$HOME/.config/hypr/waybar/config"
 waybar_styles="$HOME/.config/hypr/waybar/style"
 waybar_style="$HOME/.config/hypr/waybar/style.css"
 script_dir="$HOME/.config/hypr/scripts"
-rofi_config="$HOME/.config/hypr/rofi/themes/wbar.rasi"
+rofi_config="$HOME/.config/hypr/rofi/themes/rofi-waybar.rasi"
 
 # Function to display menu options
 menu() {
@@ -56,7 +56,7 @@ main() {
     esac
 }
 
-# Kill Rofi if already running before execution
+
 if pgrep -x "rofi" >/dev/null; then
     pkill rofi
     exit 0

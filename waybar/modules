@@ -39,11 +39,12 @@
         "tooltip": false
     },
 
-    "custom/launch_wofi": {
+    "custom/launch_rofi": {
          "format": "",   // for arch
         // "format": "󰣛",   // for fedora
         //"format": "",  // for opensuse
-        "on-click": "pkill wofi; wofi -n",
+        "on-click": "rofi -n -show drun",
+        "on-click-right": "rofi -n -show filebrowser",
         "tooltip": false
     },
 
