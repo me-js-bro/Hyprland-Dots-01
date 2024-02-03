@@ -40,19 +40,17 @@ yad --width=$dynamic_width --height=$dynamic_height \
 " = " "SUPER KEY (Windows Key)" "(SUPER KEY)" \
 "" "" "" \
 " + k" "Terminal" "(Kitty  )" \
-" + SHIFT + k" "Terminal" "(Alacritty  )" \
-" + D" "App Launcher" "(Wofi)" \
-" + SHIFT + D" "Emoji Selector" "(Wofi)" \
-" + CTRL + D" "App Launcher" "(Rofi)" \
+" + + D" "App Launcher" "(Rofi)" \
+" + SHIFT + D" "Emoji Selector" "(Rofi)" \
+" + SHIFT + F" "FilrBrowser" "(Rofi)" \
 " + E" "Open File Manager" "(Thunar)" \
-" + SHIFT + E" "Open File Manager" "(Dolphin)" \
 " + Q" "close active window" "(not kill)" \
 " + ALT + C" "Clipboard Manager" "(Cliphist)" \
 " + ALT + W" "Clear Clipboard History" "(Cliphist)" \
 " + W" "Change wallpaper (Random)" "(Swww)" \
-" + SHIFT + W" "Change wallpaper" "(Wofi)" \
-" + B" "Browser" "(Brave)" \
-" + SHIFT + B" "Browser" "(Firefox 󰈹 )" \
+" + SHIFT + W" "Select wallpaper" "(Rofi)" \
+" + B" "Browser" "(Firefox 󰈹 )" \
+" + SHIFT + B" "Browser" "(Brave)" \
 " + C" "Code Editor" "(Visual Studio Code 󰨞 )" \
 "Print" "Screenshot" "(Grimblast)" \
 " + Print" "Screenshot region" "(Grimblast)" \
@@ -61,7 +59,7 @@ yad --width=$dynamic_width --height=$dynamic_height \
 " + F" "Fullscreen" "(Toggles full-screen)" \
 " + V" "Floating" "(Toggle floating window)" \
 " + H" " " "Launch this app" \
-" + P" "Toggle Keyboard" "Ibus" \
+" + P" "Toggle Keyboard" "Ibus (Bangla & English)" \
 "" "" "" \
 "F9" "Volume" "(Volume Mute  )" \
 "F10" "Volume" "(Volume Decrease  )" \

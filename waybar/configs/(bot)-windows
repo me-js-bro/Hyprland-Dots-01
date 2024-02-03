@@ -1,27 +1,17 @@
 {
     "include": "$HOME/.config/hypr/waybar/modules",
     "layer": "top",
-    "position": "bottom",
+    "position": "top",
     "mod": "dock",
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
-    "height": 10,
-    "padding-bottom": 5,
+    "height": 20,
+    "margin-top": -5,
 
-    "modules-left": ["custom/power_btn", "custom/ibus", "custom/updater"],
+    "modules-left": ["custom/launch_rofi","hyprland/workspaces","cpu","memory","disk", "custom/cava"],
 
-    "modules-center": ["custom/launch_wofi", "wlr/taskbar"],
+    "modules-center": ["wlr/taskbar"],
 
-    "modules-right": ["tray", "custom/light_dark","custom/wallpaper-change", "pulseaudio", "network", "clock"],
-
-    "network": {
-        "format-wifi": "󰤨 {essid}",
-        "format-ethernet": "󰈀 ",
-        "format-alt": "󱘖 {ifname} (No IP)",
-        "format-linked": "󱘖 {ifname} (No IP)",
-        "format-disconnected": " Disconnected",
-        "tooltip-format": " {bandwidthUpBytes}  {bandwidthDownBytes}",
-        "interval": 5
-    }
+    "modules-right": ["tray", "custom/updater", "custom/light_dark","custom/wallpaper-change", "custom/ibus", "pulseaudio","pulseaudio#microphone", "network", "clock","custom/power_btn"]
 }

@@ -1,0 +1,26 @@
+{
+        "include": "$HOME/.config/hypr/waybar/modules",
+        "layer": "top",
+        "position": "top",
+        "mod": "dock",
+        "exclusive": true,
+        "passthrough": false,
+        "gtk-layer-shell": true,
+        "height": 20,
+        "margin-bottom": 0,
+    
+        "modules-left": ["custom/launch_rofi","hyprland/workspaces"],
+    
+        "modules-center": [ "custom/light_dark", "clock", "custom/wallpaper-change"],
+    
+        "modules-right": [ "custom/ibus", "pulseaudio","pulseaudio#microphone", "network", "tray", "custom/power_btn"],
+
+        "network": {
+            "format-wifi": "󰤨 {essid}",
+            "format-ethernet": "󱘖 Wired",
+            "tooltip-format": " {bandwidthUpBytes}  {bandwidthDownBytes}",
+            "format-linked": "󱘖 {ifname} (No IP)",
+            "format-disconnected": " Disconnected",
+            "interval": 5
+        }
+}

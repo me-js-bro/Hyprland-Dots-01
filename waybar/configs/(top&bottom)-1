@@ -1,0 +1,38 @@
+[
+    {
+        "include": "$HOME/.config/hypr/waybar/modules",
+        "layer": "top",
+        "position": "top",
+        "mod": "dock",
+        "exclusive": true,
+        "passthrough": false,
+        "gtk-layer-shell": true,
+        "height": 20,
+        "margin-top": 1,
+        "margin-bottom": -5,
+    
+        "modules-left": ["custom/launch_rofi","hyprland/workspaces","cpu","memory","disk", "custom/cava"],
+    
+        "modules-center": [],
+    
+        "modules-right": ["tray", "custom/updater", "custom/light_dark","custom/wallpaper-change", "custom/ibus", "pulseaudio","pulseaudio#microphone", "network", "clock","custom/power_btn"]
+    },
+    {
+        "include": "$HOME/.config/hypr/waybar/modules",
+        "layer": "top",
+        "position": "bottom",
+        "mod": "dock",
+        "exclusive": true,
+        "passthrough": false,
+        "gtk-layer-shell": true,
+        "height": 20,
+        "margin-top": -10,
+    
+        "modules-left": [],
+    
+        "modules-center": ["wlr/taskbar"],
+    
+        "modules-right": []
+    }
+        
+]
