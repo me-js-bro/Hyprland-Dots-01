@@ -51,4 +51,4 @@ case "$1" in
 		;;
 esac
 
-"$SCRIPTS_DIR/paywal.sh"
+"$SCRIPTS_DIR/pywal.sh"

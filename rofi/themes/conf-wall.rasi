@@ -17,7 +17,7 @@ configuration {
 }
 
 /* ---- Load pywal colors (custom wal template) ---- */
-@import "~/.config/hypr/rofi/themes/rofi-paywal.rasi"
+@import "~/.config/hypr/rofi/themes/rofi-pywal.rasi"
 
 /* ---- Window ---- */
 window {

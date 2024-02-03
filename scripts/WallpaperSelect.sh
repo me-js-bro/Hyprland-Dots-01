@@ -81,6 +81,6 @@ fi
 main
 
 sleep 0.5
-${SCRIPTSDIR}/paywal.sh
+${SCRIPTSDIR}/pywal.sh
 sleep 0.2
 ${SCRIPTSDIR}/Refresh.sh

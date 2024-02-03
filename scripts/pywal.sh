@@ -30,10 +30,6 @@ done
 
 # Check the flag before executing further commands
 if [ "$ln_success" = true ]; then
-    # execute pywal
-    # wal -i "$wallpaper_path"
-
-    # execute pywal skipping tty and terminal changes
     wal -i "$wallpaper_path"
 fi
 
@@ -51,34 +47,13 @@ gsettings set org.gnome.desktop.interface background-color "$background_color"
 gsettings set org.gnome.desktop.interface foreground-color "$foreground_color"
 
 kitty=~/.config/hypr/kitty/kitty.conf
-alacritty=~/.config/hypr/alacritty/alacritty.toml
-vs_code=~/.config/Code/User/settings.json
 
 # kitty colors
 sed -i "s/background .*$/background $background_color/g" "$kitty"
 sed -i "s/foreground .*$/foreground $foreground_color/g" "$kitty"
 kitty @ --to=unix:/tmp/kitty.sock quit
 
-# alacritty colors
-sed -i "s/background = .*$/background = $background_color/g" "$alacritty"
-sed -i "s/foreground = .*$/foreground = $foreground_color/g" "$alacritty"
-
 # setting rofi theme
-ln -sf ~/.cache/wal/colors-rofi-dark.rasi ~/.config/hypr/rofi/themes/rofi-paywal.rasi
-
-# vs code
-# sed -i "s/"editor.background": .*/"editor.background": $background_color/g" "$vs_code"
-# sed -i "s/"sideBar.background": .*/"sideBar.background": $background_color/g" "$vs_code"
-# sed -i "s/"sideBar.border": .*/"sideBar.border": $background_color/g" "$vs_code"
-# sed -i "s/"editorGroupHeader.tabsBackground": .*/"editorGroupHeader.tabsBackground": $background_color/g" "$vs_code"
-# sed -i "s/"activityBar.background": .*/"activityBar.background": $background_color/g" "$vs_code"
-# sed -i "s/"tab.activeBorder": .*/"tab.activeBorder": $background_color/g" "$vs_code"
-# sed -i "s/"tab.border": .*/"tab.border": $background_color/g" "$vs_code"
-# sed -i "s/"tab.inactiveBackground": .*/"tab.inactiveBackground": $background_color/g" "$vs_code"
-
-# Restart VS Code to apply changes
-# code --restart
-
-
+ln -sf ~/.cache/wal/colors-rofi-dark.rasi ~/.config/hypr/rofi/themes/rofi-pywal.rasi
 
 # ------------------------
