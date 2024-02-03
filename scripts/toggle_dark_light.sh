@@ -1,43 +1,44 @@
-#!/bin/sh
+#!/bin/bash
 
-rofi=$(readlink -f ~/.config/rofi/config.rasi | cut -d '-' -f2)
-alacritty=$(readlink -f ~/.config/alacritty/alacritty.toml | cut -d '-' -f2)
+mode_file="$HOME/.mode"
+wallpaper_dir_dark="$HOME/.config/hypr/Wallpaper/Dynamic/dark"
+wallpaper_dir_light="$HOME/.config/hypr/Wallpaper/Dynamic/light"
+script_dir="$HOME/.config/hypr/scripts"
 
-# waybar
-waybar_style=$(readlink -f ~/.config/waybar/style.css | cut -d '-' -f2)
+# Create the mode file if it doesn't exist
+touch "$mode_file"
 
-# vs code settings
-vs_code_settings=~/.config/Code/User/settings.json
+# Read the current mode
+current_mode=$(cat "$mode_file")
 
-#if the theme is not dark then we need to switch to it
-if [ $rofi != "light.rasi" ]; then
-    SWITCHTO="-light"
-fi
+set_random_wallpaper_swww() {
+    wallpaper_files=("$1"/*)
+    random_wallpaper="${wallpaper_files[RANDOM % ${#wallpaper_files[@]}]}"
+    swww img "$random_wallpaper" --transition-fps 60 --transition-type random --transition-duration 2
+}
 
-#change the background image and be cool about it ;)
-swww img ~/.config/hypr/Wallpaper/dynamic/wallpaper$SWITCHTO.jpg --transition-fps 60 --transition-type random --transition-duration 2
+if [ "$current_mode" == "dark" ]; then
+    # Switch to light mode
 
-#set the xfce theme
-# xfconf-query -c xsettings -p /Net/ThemeName -s "theme$SWITCHTO"
+    # rofi themes will be set by pywal
 
-#change gtk theme
-gsettings set org.gnome.desktop.interface gtk-theme "theme$SWITCHTO"
+    # gtk theme
+    gsettings set org.gnome.desktop.interface gtk-theme "theme-light"
 
-#set the wofi theme
-ln -sf ~/.config/wofi/style/style$SWITCHTO.css ~/.config/wofi/style.css
-
-#set rofi theme
-ln -sf ~/.config/rofi/themes/config$SWITCHTO.rasi ~/.config/rofi/config.rasi
-
-# change alacritty theme
-ln -sf ~/.config/alacritty/themes/alacritty$SWITCHTO.toml ~/.config/alacritty/alacritty.toml
-
-# change vs code theme
-if [ $rofi != "light.rasi" ]; then
-    sed -i 's/"Theme Flat"/"Atom One Light"/g' "$vs_code_settings"
+    # switch wallpaper
+    set_random_wallpaper_swww "$wallpaper_dir_light"
+    echo "light" > "$mode_file"
 else
-    sed -i 's/"Atom One Light"/"Theme Flat"/g' "$vs_code_settings"
+    # Switch to dark mode
+
+    # rofi themes will be set by pywal
+
+    # gtk theme
+    gsettings set org.gnome.desktop.interface gtk-theme "theme"
+
+    # set wallpaper
+    set_random_wallpaper_swww "$wallpaper_dir_dark"
+    echo "dark" > "$mode_file"
 fi
 
-#restart the waybar
-killall -SIGUSR2 waybar
+"$script_dir/pywal.sh"
