@@ -13,9 +13,20 @@
     "padding-top": 5,
     "padding-bottom": 5,
 
-    "modules-left": ["custom/light_dark", "custom/wallpaper-change", "custom/ibus",  "custom/updater", "wlr/taskbar"],
+    "modules-left": ["custom/launch_rofi", "custom/light_dark", "custom/wallpaper-change", "custom/ibus",  "custom/updater", "wlr/taskbar"],
 
-    "modules-center": ["custom/cava"],
+    "modules-center": ["cpu", "memory"],
 
-    "modules-right": ["tray", "pulseaudio","pulseaudio#microphone", "network", "clock", "custom/power_btn"]
+    "modules-right": ["tray", "pulseaudio","pulseaudio#microphone", "clock", "network", "custom/power_btn"],
+
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "󰤨 {essid}",
+        "format-ethernet": "",
+        "tooltip-format": "󱘖 {ifname} (No IP)",
+        "format-linked": "󱘖 {ifname} (No IP)",
+        "format-disconnected": " Disconnected",
+        "format-alt": " {bandwidthUpBytes}  {bandwidthDownBytes}",
+        "interval": 5
+    }
 }

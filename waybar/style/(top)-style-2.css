@@ -29,13 +29,15 @@ tooltip label{
 
 #workspaces button {
     padding: 5px;
-    color: #4f5064;
+    color: #272731;
     margin-right: 5px;
     background-color: rgba(17, 17, 27, 0);
 }
 
 #workspaces button.active {
-    color: #b8bfdd;
+    color: #21304d;
+    background: rgba(233, 238, 255, 0.616);
+    border-radius: 7px;
 }
 
 #workspaces button.focused {
@@ -70,7 +72,7 @@ tooltip label{
 }
 
 #taskbar button.active {
-    background: #324857;
+    background: #b0ceff;
     margin-left: 3px;
     padding-left: 12px;
     padding-right: 12px;
@@ -80,9 +82,9 @@ tooltip label{
 }
 
 #taskbar button:hover {
-    background: #304150;
-    padding-left: 3px;
-    padding-right: 3px;
+    background: #b0ceff;
+    padding-left: 8px;
+    padding-right: 8px;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
@@ -134,11 +136,15 @@ tooltip label{
 }
 
 #taskbar{
+    background: #89b4fa;
     border-radius: 10px;
     margin-left: 10px;
 }
 
 #custom-ibus {
+    background: #eba0ac;
+    color: #18202A;
+    font-weight: 700;
     border-radius: 10px;
     margin-right: 10px;
 }
@@ -146,6 +152,8 @@ tooltip label{
 #network {
     margin-right: 10px;
     border-radius: 10px;
+    background: #dda1e3;
+    color: #304150;
 }
 
 #custom-updater {
@@ -162,6 +170,7 @@ tooltip label{
 }
 
 #tray {
+    background: #8ba3ca;
     margin-right: 10px;
     border-radius: 10px;
 }
@@ -177,17 +186,22 @@ tooltip label{
 
 #custom-power_btn {
     border-radius: 10px;
-    color: red;
+    background: red;
+    color: #11111b;
     padding: 0 15px;
 }
 
 #custom-light_dark {
     border-radius: 10px 0 0 10px;
     margin-right: 0;
+    padding: 0 10px;
+    margin-left: 15px;
 }
 
-#custom-light_dark {
-    padding: 0 15px;
+#custom-light_dark, #custom-wallpaper-change {
+    background: #25d3ff;
+    color: #304150;
+    font-weight: 700;
 }
 
 #custom-weather {
@@ -201,6 +215,8 @@ tooltip label{
 
 
 #workspaces {
+    background: #cdd6f4;
+    color: #18202A;
     padding-right: 5px;
     padding-left: 5px;
 }
@@ -231,6 +247,9 @@ tooltip label{
 }
 
 #clock {
+    background: #43a9b6;
+    color: #18202A;
+    font-weight: 700;
     border-radius: 10px;
     margin-left: 10px;
     padding-right: 15px;
@@ -242,14 +261,19 @@ tooltip label{
     border-right: 0px;
 }
 
+#pulseaudio, #pulseaudio.microphone {
+    background: #cdd6f4;
+    color: #142429;
+}
+
 #battery {
     color: #a6e3a1;
     border-left: 0px;
 }
 
 #custom-cava {
-    background: #18202A;
-    color: #9DB8C1;
+    background: #a6e3a1;
+    color: #142429;
     opacity: 0.8;
     padding: 0px 10px;
     margin: 3px 0px;

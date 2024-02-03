@@ -176,6 +176,7 @@ tooltip label{
 }
 
 #custom-power_btn {
+	margin-left: 10px;
     border-radius: 10px;
     color: red;
     padding: 0 15px;

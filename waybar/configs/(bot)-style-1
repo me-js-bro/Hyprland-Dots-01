@@ -11,7 +11,7 @@
 
     "modules-left": ["custom/launch_rofi","hyprland/workspaces","cpu","memory","disk", "custom/cava"],
 
-    "modules-center": ["wlr/taskbar"],
+    "modules-center": [],
 
     "modules-right": ["tray", "custom/updater", "custom/light_dark","custom/wallpaper-change", "custom/ibus", "pulseaudio","pulseaudio#microphone", "network", "clock","custom/power_btn"]
 }

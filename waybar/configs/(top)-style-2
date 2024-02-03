@@ -9,11 +9,11 @@
     "height": 20,
     "margin-top": -5,
 
-    "modules-left": ["wlr/taskbar", "clock"],
+    "modules-left": ["wlr/taskbar", "clock", "custom/light_dark","custom/wallpaper-change", "custom/cava"],
 
     "modules-center": ["hyprland/workspaces"],
 
-    "modules-right": ["tray", "custom/updater", "custom/light_dark","custom/wallpaper-change", "custom/ibus", "pulseaudio","pulseaudio#microphone", "network","custom/power_btn"],
+    "modules-right": ["tray", "custom/ibus", "pulseaudio","pulseaudio#microphone", "network","custom/power_btn"],
 
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -24,26 +24,14 @@
         "format": "{icon}",
         "format-icons": {
             "1": "",
-            "2": "",
+            "2": "󰈹",
             "3": "",
             "4": "",
+            "5": "󰕼",
             "urgent": "",
             "focused": "",
             "default": ""
         },
-        // "format-icons": {
-        //      for arch
-        //      "active": "󰮯",
-        //      "default": ""
-
-            // for fedora
-            // "active": "󰣛",  
-            // "default": ""
-
-            // for opensuse
-            //"active": "",
-            //"default": ""
-        //   },
         "persistent-workspaces": {
             "1": [],
             "2": [],

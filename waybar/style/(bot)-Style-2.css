@@ -12,16 +12,16 @@
 }
 
 window#waybar {
-    background: rgba(24, 32, 42, 0.87);
-    color: #9DB8C1;
-    border: 1px solid #9DB8C1;
+    background: rgba(0, 0, 0, 0.459);
+    color: #cae6f0;
+    border: 2px solid #9DB8C1;
     padding: 0 0;
-    border-radius: 7px;
+    border-radius: 5px;
 }
 
 tooltip {
-    background: #18202A;
-    opacity: 0.8;
+    background: rgba(0, 0, 0, 0.582);
+    opacity: 0.9;
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
@@ -118,10 +118,9 @@ tooltip label{
 #backlight {
     background: rgba(24, 32, 42, 0);
     opacity: 0.8;
-    padding: 0px 10px;
-    /* padding-bottom: 5px; */
-    margin: 3px 0px;
-    margin: 5px 0;
+    padding: 2px 10px;
+    /* margin: 3px 0px; */
+    margin: 2px 0;
     border: 0px;
 }
 
@@ -132,13 +131,6 @@ tooltip label{
     padding-right: 20px;
 }
 
-#custom-wallpaper-change {
-    font-size: 16px;
-    padding-right: 20px;
-    margin-right: 10px;
-    border-radius: 0 10px 10px 0;
-}
-
 #taskbar{
     border-radius: 10px;
 }
@@ -146,11 +138,6 @@ tooltip label{
 #custom-ibus {
     border-radius: 10px;
     margin-right: 10px;
-}
-
-#network {
-    margin-right: 10px;
-    border-radius: 10px;
 }
 
 #custom-updater {
@@ -171,23 +158,9 @@ tooltip label{
     border-radius: 10px;
 }
 
-#custom-light_dark, #custom-power_btn, #workspaces, #pulseaudio.microphone, #battery, #disk {
+#workspaces, #pulseaudio.microphone, #battery, #disk {
     border-radius: 0px 10px 10px 0px;
     margin-right: 10px;
-}
-
-#custom-power_btn {
-    padding: 0 15px;
-    padding-bottom: 2px;
-    color: red;
-    border-radius: 10px;
-}
-
-#custom-light_dark {
-    border-radius: 10px 0 0 10px;
-    padding: 0 15px;
-    padding-right: 5px;
-    margin-right: 0;
 }
 
 #custom-weather {
@@ -219,11 +192,51 @@ tooltip label{
     margin-right: 20px;
 }
 
-#custom-launch_rofi {
-    color: #89b4fa;
-    margin-left: 10px;
-    border-right: 0px;
+/* Common- left */
+
+#custom-wallpaper-change {
+    font-size: 16px;
+    padding-right: 20px;
 }
+
+#custom-wallpaper-change, #custom-light_dark {
+    background: #cae6f0;
+    border-radius: 0;
+    color: rgba(0, 0, 0, 0.836);
+}
+
+#custom-launch_rofi {
+    font-size: 20px;
+    color: #5379b8;
+    background: #cae6f0;
+    border-radius: 0 0 0 3px;
+    margin-left: 2px;
+}
+
+/* Common- left */
+
+
+
+
+/* common- right */
+
+#custom-power_btn {
+    background: #cae6f0;
+    color: red;
+    padding: 0 15px;
+    padding-bottom: 2px;
+    margin-right: 2px;
+    border-radius: 0 3px 0 0;
+}
+
+#network {
+    background: #cae6f0;
+    border-radius: 0;
+    color: rgba(0, 0, 0, 0.836);
+    padding-left: 15px;
+}
+
+/* common- right */
 
 #pulseaudio {
     /* color: #89b4fa; */
@@ -247,7 +260,7 @@ tooltip label{
     border-left: 0px;
 }
 
-#custom-cava {
+/* #custom-cava {
     background: #18202A;
     color: #9DB8C1;
     opacity: 0.8;
@@ -257,4 +270,4 @@ tooltip label{
     margin-top: 10px;
     border: 0px;
     border-radius: 10px;
-}
+} */
