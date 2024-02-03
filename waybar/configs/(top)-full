@@ -17,5 +17,5 @@
 
     "modules-center": ["custom/ibus", "custom/light_dark","clock","custom/wallpaper-change", "custom/updater"],
 
-    "modules-right": ["tray", "pulseaudio","pulseaudio#microphone", "network","custom/power_btn"]
+    "modules-right": ["pulseaudio","pulseaudio#microphone", "network", "tray", "custom/power_btn"]
 }

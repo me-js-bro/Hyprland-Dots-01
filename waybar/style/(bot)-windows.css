@@ -14,7 +14,7 @@
 window#waybar {
     background: #18202a;
     color: #9DB8C1;
-    border-top: 1px solid rgba(157, 184, 193, 0.192);
+    border-top: 1px solid rgba(157, 184, 193, 0.37);
     padding: 0 0;
     /* margin: 0; */
 }
@@ -149,7 +149,7 @@ tooltip label{
 }
 
 #network {
-    margin-right: -15px;
+    /* margin-right: 10px; */
     border-radius: 10px;
 }
 

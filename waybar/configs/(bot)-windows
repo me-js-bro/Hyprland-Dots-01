@@ -1,7 +1,7 @@
 {
     "include": "$HOME/.config/hypr/waybar/modules",
     "layer": "top",
-    "position": "top",
+    "position": "bottom",
     "mod": "dock",
     "exclusive": true,
     "passthrough": false,
@@ -9,9 +9,19 @@
     "height": 20,
     "margin-top": -5,
 
-    "modules-left": ["custom/launch_rofi","hyprland/workspaces","cpu","memory","disk", "custom/cava"],
+    "modules-left": ["hyprland/workspaces","cpu","memory","disk"],
 
-    "modules-center": ["wlr/taskbar"],
+    "modules-center": ["custom/launch_rofi", "wlr/taskbar"],
 
-    "modules-right": ["tray", "custom/updater", "custom/light_dark","custom/wallpaper-change", "custom/ibus", "pulseaudio","pulseaudio#microphone", "network", "clock","custom/power_btn"]
+    "modules-right": ["tray", "custom/updater", "custom/light_dark","custom/wallpaper-change", "custom/ibus", "pulseaudio", "network", "clock","custom/power_btn"],
+
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "󰤨 {essid}",
+        "format-ethernet": "",
+        "tooltip-format": " {bandwidthUpBytes}  {bandwidthDownBytes}",
+        "format-linked": "󱘖 {ifname} (No IP)",
+        "format-disconnected": " Disconnected",
+        "interval": 5
+    }
 }
