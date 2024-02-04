@@ -5,7 +5,7 @@
     "wlr/taskbar": {
 		"format": "{icon}",
 		"icon-size": 18,
-		"icon-theme": "Tela-circle-dracula",
+		"icon-theme": "TokyoNight-SE",
         "spacing": 0,
 		"tooltip-format": "{title}",
 		"on-click": "activate",

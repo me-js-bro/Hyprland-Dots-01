@@ -42,10 +42,6 @@ else
     echo "No file found named colors.json"
 fi
 
-# Apply background and foreground colors to GTK settings
-gsettings set org.gnome.desktop.interface background-color "$background_color"
-gsettings set org.gnome.desktop.interface foreground-color "$foreground_color"
-
 kitty=~/.config/hypr/kitty/kitty.conf
 
 # kitty colors
