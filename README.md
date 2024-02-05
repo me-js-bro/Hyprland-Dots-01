@@ -4,4 +4,4 @@
 
 #### To install Hyprland and copy the dotfiles on Fedora Linux, please visit [Here](https://github.com/me-js-bro/Fedora-Hyprland).
 
-#### To install Hyprland and copy the dotfiles on Arch Linux, please visit [Here](https://github.com/me-js-bro/OpenSuse-Hyprland).
+#### To install Hyprland and copy the dotfiles on OpenSuse (Tumbleweed), please visit [Here](https://github.com/me-js-bro/OpenSuse-Hyprland).
