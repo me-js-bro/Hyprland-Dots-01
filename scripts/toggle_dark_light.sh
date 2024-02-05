@@ -4,10 +4,17 @@ mode_file="$HOME/.mode"
 wallpaper_dir_dark="$HOME/.config/hypr/Dynamic-Wallpapers/dark"
 wallpaper_dir_light="$HOME/.config/hypr/Dynamic-Wallpapers/light"
 vs_code_settings="$HOME/.config/Code/User/settings.json"
-script_dir="$HOME/.config/hypr/scripts"
+scriptsDir="$HOME/.config/hypr/scripts"
 
 # Create the mode file if it doesn't exist
 touch "$mode_file"
+
+# Transition config
+FPS=60
+TYPE="any"
+DURATION=2
+BEZIER=".43,1.19,1,.4"
+SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION --transition-bezier $BEZIER"
 
 # Read the current mode
 current_mode=$(cat "$mode_file")
@@ -15,7 +22,7 @@ current_mode=$(cat "$mode_file")
 set_random_wallpaper_swww() {
     wallpaper_files=("$1"/*)
     random_wallpaper="${wallpaper_files[RANDOM % ${#wallpaper_files[@]}]}"
-    swww img "$random_wallpaper" --transition-fps 60 --transition-type any --transition-duration 2
+    swww query || swww init && swww img ${random_wallpaper} $SWWW_PARAMS
 }
 
 if [ "$current_mode" == "dark" ]; then
@@ -48,5 +55,7 @@ else
     echo "dark" > "$mode_file"
 fi
 
-"$script_dir/pywal.sh" # set colors
-"$script_dir/Refresh.sh" # refresh waybar
+sleep 0.5
+${scriptsDir}/pywal.sh
+sleep 0.2
+${scriptsDir}/Refresh.sh
