@@ -7,8 +7,8 @@ wallDIR="$HOME/.config/hypr/Wallpaper"
 
 # Transition config
 FPS=60
-TYPE="wipe"
-DURATION=1
+TYPE="any"
+DURATION=2
 BEZIER=".43,1.19,1,.4"
 SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION"
 
