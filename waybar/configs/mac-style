@@ -1,0 +1,53 @@
+[
+    {
+        "include": "$HOME/.config/hypr/waybar/modules",
+        "layer": "top",
+        "position": "top",
+        "mod": "dock",
+        "exclusive": true,
+        "passthrough": false,
+        "gtk-layer-shell": true,
+        "height": 20,
+        "margin-top": -5,
+        "margin-left": -20,
+        "margin-right": -20,
+    
+        "modules-left": ["custom/launch_rofi", "hyprland/workspaces"],
+    
+        "modules-center": ["clock"],
+    
+        "modules-right": ["tray", "custom/updater", "custom/light_dark","custom/wallpaper-change", "custom/ibus", "pulseaudio", "network", "custom/power_btn"],
+    
+        "network": {
+            "format-wifi": "󰤨 {essid}",
+            "format-ethernet": "",
+            "tooltip-format": " {bandwidthUpBytes}  {bandwidthDownBytes}",
+            "format-linked": "󱘖 {ifname} (No IP)",
+            "format-disconnected": " Disconnected",
+            "interval": 5
+        }
+    },
+    
+    {
+        "include": "$HOME/.config/hypr/waybar/modules",
+        "layer": "bottom",
+        "position": "bottom",
+        "mod": "pannel",
+        "exclusive": true,
+        "passthrough": false,
+        "gtk-layer-shell": true,
+        "height": 20,
+        "width": 2,
+        "margin-top": 2,
+        "margin-bottom":4,
+    
+        "modules-left": [],
+    
+        "modules-center": ["wlr/taskbar"],
+    
+        "modules-right": [],
+
+        "css": ["$HOME/.config/hypr/waybar/style/mac_bottom.css"]
+    }
+        
+]

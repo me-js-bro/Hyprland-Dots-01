@@ -1,54 +1,23 @@
 #!/bin/bash
 
-DIR=$HOME/.config/hypr/Wallpaper
-SCRIPTS_DIR="$HOME/.config/hypr/scripts"
-PICS=($(find ${DIR} -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.gif" \)))
+wallDIR="$HOME/.config/hypr/Wallpaper"
+SCRIPTSDIR="$HOME/.config/hypr/scripts"
+
+PICS=($(find ${wallDIR} -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.gif" \)))
 RANDOMPICS=${PICS[ $RANDOM % ${#PICS[@]} ]}
 
-# New line to store the current wallpaper path in a file
-echo "$RANDOMPICS" > $HOME/.config/current_wallpaper
 
-change_swaybg(){
-  pkill swww
-  pkill swaybg
-  swaybg -m fill -i ${RANDOMPICS}
-}
+# Transition config
+FPS=60
+TYPE="any"
+DURATION=2
+BEZIER=".43,1.19,1,.4"
+SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION --transition-bezier $BEZIER"
 
-change_swww(){
-  pkill swaybg
-  swww query || swww init
-  swww img ${RANDOMPICS} --transition-fps 30 --transition-type any --transition-duration 3
-}
 
-change_current(){
-  if pidof swaybg >/dev/null; then
-    change_swaybg
-  else
-    change_swww
-  fi
-}
+swww query || swww init && swww img ${RANDOMPICS} $SWWW_PARAMS
 
-switch(){
-  if pidof swaybg >/dev/null; then
-    change_swww
-  else
-    change_swaybg
-  fi
-}
-
-case "$1" in
-	"swaybg")
-		change_swaybg
-		;;
-	"swww")
-		change_swww
-		;;
-  "s")
-		switch
-		;;
-	*)
-		change_current
-		;;
-esac
-
-"$SCRIPTS_DIR/pywal.sh"
+sleep 0.5
+${SCRIPTSDIR}/pywal.sh
+sleep 0.2
+${SCRIPTSDIR}/Refresh.sh
