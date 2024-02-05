@@ -43,18 +43,20 @@ yad --width=$dynamic_width --height=$dynamic_height \
 " + + D" "App Launcher" "(Rofi)" \
 " + SHIFT + D" "Emoji Selector" "(Rofi)" \
 " + SHIFT + F" "FilrBrowser" "(Rofi)" \
-" + E" "Open File Manager" "(Thunar)" \
+" + E" "Open File Manager" "(Dolphin)" \
+" + SHIFT + E" "Open File Manager" "(Thunar)" \
 " + Q" "close active window" "(not kill)" \
 " + ALT + C" "Clipboard Manager" "(Cliphist)" \
 " + ALT + W" "Clear Clipboard History" "(Cliphist)" \
 " + W" "Change wallpaper (Random)" "(Swww)" \
 " + SHIFT + W" "Select wallpaper" "(Rofi)" \
+" + CTRL + W" "Select Waybar Layout" "(Rofi)" \
 " + B" "Browser" "(Firefox 󰈹 )" \
-" + SHIFT + B" "Browser" "(Brave)" \
+" + SHIFT + B" "Browser" "(Brave, if installed)" \
 " + C" "Code Editor" "(Visual Studio Code 󰨞 )" \
-"Print" "Screenshot" "(Grimblast)" \
+" " "Print" "Screenshot" "(Grimblast)" \
 " + Print" "Screenshot region" "(Grimblast)" \
-" + X" "Power-menu" "(Slogout)" \
+" + X" "Power-menu" "(Wlogout)" \
 " + SHIFT + L" "Screen lock" "(Swaylock)" \
 " + F" "Fullscreen" "(Toggles full-screen)" \
 " + V" "Floating" "(Toggle floating window)" \
