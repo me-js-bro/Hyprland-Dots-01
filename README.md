@@ -3,7 +3,7 @@
 <hr>
 
 ### How to use these files:
-- First create a directory named hypr inside your .condif directory. You can use this command:
+- First create a directory named hypr inside your .config directory. You can use this command:
    ```
    mkdir -p ~/.config/hypr
    ```
