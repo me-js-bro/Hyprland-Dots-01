@@ -39,7 +39,7 @@ window {
     fullscreen:                 false;
     enabled:                    true;
     border-radius:              7px;
-    background-image:    		url("~/.config/current_wallpaper", height);
+    background-image:    		url("~/.config/hypr/Wallpaper/current_wallpaper", height);
  	
 }
 

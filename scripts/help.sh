@@ -43,8 +43,8 @@ yad --width=$dynamic_width --height=$dynamic_height \
 " + + D" "App Launcher" "(Rofi)" \
 " + SHIFT + D" "Emoji Selector" "(Rofi)" \
 " + SHIFT + F" "FilrBrowser" "(Rofi)" \
-" + E" "Open File Manager" "(Dolphin)" \
-" + SHIFT + E" "Open File Manager" "(Thunar)" \
+" + E" "Open File Manager" "(Thunar)" \
+" + SHIFT + E" "Open File Manager" "(Dolphin)" \
 " + Q" "close active window" "(not kill)" \
 " + ALT + C" "Clipboard Manager" "(Cliphist)" \
 " + ALT + W" "Clear Clipboard History" "(Cliphist)" \

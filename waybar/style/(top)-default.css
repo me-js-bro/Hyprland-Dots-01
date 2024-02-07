@@ -123,7 +123,7 @@ tooltip label{
     border-radius: 0 10px 10px 0;
     margin-right: 10px;
     font-size: 20px;
-    padding-right: 20px;
+    padding-right: 15px;
 }
 
 #custom-wallpaper-change {
@@ -142,8 +142,8 @@ tooltip label{
 }
 
 #custom-ibus {
-    border-radius: 10px;
-    margin-right: 10px;
+    border-radius: 10px 0 0 10px;
+    margin-right: 0;
 }
 
 #network {

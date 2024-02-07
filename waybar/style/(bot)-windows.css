@@ -127,7 +127,7 @@ tooltip label{
 
 #custom-clipboard {
     border-radius: 0 10px 10px 0;
-    margin-right: 10px;
+    margin-right: 0;
     font-size: 20px;
     padding-right: 20px;
 }
@@ -145,7 +145,7 @@ tooltip label{
 
 #custom-ibus {
     border-radius: 10px;
-    margin-right: 10px;
+    margin-right: 0;
 }
 
 #network {
