@@ -1,12 +1,6 @@
 #!/bin/bash
 
-# clipboard history..
-# if [[ ! $(pidof rofi) ]]; then
-# 	cliphist list | rofi -dmenu -config ~/.config/rofi/config.rasi | cliphist decode | wl-copy
-# else
-# 	pkill rofi
-# fi
-
+scripts_dir=$HOME/.config/hypr/scripts
 
 case $1 in
     c) cliphist list | rofi -dmenu -theme-str "entry { placeholder: \"Search Clipboard\";} ${pos} ${r_override}" -theme-str "${fnt_override}" -config ~/.config/rofi/themes/rofi-clipboard.rasi | cliphist decode | wl-copy
@@ -22,3 +16,6 @@ case $1 in
         exit 1
         ;;
 esac
+
+sleep 0.1
+${scripts_dir}/Refresh.sh

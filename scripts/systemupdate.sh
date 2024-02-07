@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# for arch linux
 if [ -f /etc/arch-release ]; then
     # source variables
     ScrDir=`dirname $(realpath $0)`
@@ -39,18 +40,20 @@ if [ -f /etc/arch-release ]; then
         fi
 }
 
+# for fedora
 elif [ -f /etc/fedora-release ]; then
-    ofc=`dnf check-update | grep | wc -l`
 
-    # Calculate total available updates
-    upd=$(( ofc ))
+    # Calculate total available updates fedora
+    upd=$(dnf check-update -q | wc -l)
 
     # Show tooltip
     if [ $upd -eq 0 ] ; then
         echo "{\"text\":\"$upd\", \"tooltip\":\" Packages are up to date\"}"
     else
-        echo "{\"text\":\"$upd\", \"tooltip\":\"󱓽 Official $ofc\"}"
+        echo "{\"text\":\"$upd\", \"tooltip\":\"󱓽 Updates Available: $upd\"}"
     fi
+
+    sleep 1
 
     update_packages() {
         kitty --title systemupdate sh -c "sudo dnf update -y"
@@ -61,6 +64,7 @@ elif [ -f /etc/fedora-release ]; then
         fi
 }
 
+# opensuse ( not sure if it works or not )
 elif [ -f /etc/os-release ]; then
     source /etc/os-release
     if [[ $ID == "opensuse-tumbleweed" ]]; then
