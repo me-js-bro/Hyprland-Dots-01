@@ -40,8 +40,8 @@
     },
 
     "custom/launch_rofi": {
-        "format": "",   // for arch
-        //  "format": "󰣛",   // for fedora
+        // "format": "",   // for arch
+         "format": "󰣛",   // for fedora
         //"format": "",  // for opensuse
         "on-click": "rofi -n -show drun",
         "on-click-right": "rofi -n -show filebrowser",
@@ -66,12 +66,12 @@
         // },
         "format-icons": {
             // for arch
-            "active": "󰮯",
-            "default": ""
+            // "active": "󰮯",
+            // "default": ""
 
             // for fedora
-            //  "active": "󰣛",  
-            //  "default": ""
+             "active": "󰣛",  
+             "default": ""
 
             // for opensuse
             //"active": "",
@@ -129,6 +129,7 @@
         "tooltip-format": " {used:0.1f}GB/{total:0.1f}GB"
     },
 
+    // Works greate with Arch Linux, but it may show a little wrong number in fedora. but if update list is 0, then it will show "Packages are up to date"
     "custom/updater": {
         "exec": "~/.config/hypr/scripts/systemupdate.sh",
         "return-type": "json",
