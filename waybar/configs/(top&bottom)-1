@@ -25,7 +25,7 @@
         "exclusive": true,
         "passthrough": false,
         "gtk-layer-shell": true,
-        "height": 20,
+        "height": 25,
         "margin-top": -10,
     
         "modules-left": [],

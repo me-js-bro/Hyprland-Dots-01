@@ -10,6 +10,7 @@ waybar_styles="$HOME/.config/hypr/waybar/style"
 waybar_style="$HOME/.config/hypr/waybar/style.css"
 script_dir="$HOME/.config/hypr/scripts"
 rofi_config="$HOME/.config/hypr/rofi/themes/rofi-waybar.rasi"
+environment_config="$HOME/.config/hypr/configs/environment.conf"
 
 # Function to display menu options
 menu() {
@@ -23,8 +24,19 @@ menu() {
 
 # Apply selected configuration
 apply_config() {
-    ln -sf "$waybar_layouts/$1" "$waybar_config"
-    ln -sf "$waybar_styles/$1.css" "$waybar_style"
+    layout_file="$waybar_layouts/$1"
+    style_file="$waybar_styles/$1.css"
+
+    ln -sf "$layout_file" "$waybar_config"
+    ln -sf "$style_file" "$waybar_style"
+
+    # Check if style is "(bot)-style-3" and CSS file is "(bot)-style-3.css"
+    if [[ "$1" == "(bot)-style-3" && "$style_file" == "$HOME/.config/hypr/waybar/style/(bot)-style-3.css" ]]; then
+        sed -i 's/#blurls=waybar/blurls=waybar/g' "$environment_config"
+    else
+        sed -i 's/blurls=waybar/#blurls=waybar/g' "$environment_config"
+    fi
+
     restart_waybar_if_needed
 }
 
@@ -56,10 +68,11 @@ main() {
     esac
 }
 
-
 if pgrep -x "rofi" >/dev/null; then
     pkill rofi
     exit 0
 fi
 
 main
+
+"${script_dir}/Refresh.sh"

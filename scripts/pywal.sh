@@ -33,11 +33,29 @@ if [ "$ln_success" = true ]; then
     wal -i "$wallpaper_path"
 fi
 
+# Function to convert hex color code to rgba
+hex_to_rgba() {
+    hex=$1
+    r=$(printf '%s' ${hex:1:2})
+    g=$(printf '%s' ${hex:3:2})
+    b=$(printf '%s' ${hex:5:2})
+    a=$(printf '%s' ${hex:7:2})
+
+    # rgba="rgba($r$g$b$a)"
+    rgba="rgba($r$g$b$a"FF")"
+    echo $rgba
+}
+
+
 # Extract colors from colors.json
 colors_file=~/.cache/wal/colors.json
 if [ -f $colors_file ]; then
     background_color=$(jq -r '.special.background' "$colors_file")
     foreground_color=$(jq -r '.special.foreground' "$colors_file")
+
+  # Usage example
+    hex_color="$foreground_color"
+    rgba_color=$(hex_to_rgba $hex_color)
 else
     echo "No file found named colors.json"
 fi
@@ -48,6 +66,13 @@ kitty=~/.config/hypr/kitty/kitty.conf
 sed -i "s/background .*$/background $background_color/g" "$kitty"
 sed -i "s/foreground .*$/foreground $foreground_color/g" "$kitty"
 kitty @ --to=unix:/tmp/kitty.sock quit
+
+# Set Hyprland active border color based on foreground color
+hyprland_config=~/.config/hypr/configs/settings.conf
+sed -i "s/col.active_border .*$/col.active_border = $rgba_color/g" "$hyprland_config"
+
+# Reload Hyprland configuration (optional)
+hyprctl reload
 
 # setting rofi theme
 ln -sf ~/.cache/wal/colors-rofi-dark.rasi ~/.config/hypr/rofi/themes/rofi-pywal.rasi
