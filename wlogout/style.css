@@ -1,49 +1,87 @@
-* {
-	background-image: none;
-}
+/* pywal-wlogout */
+
+/* Importing pywal colors */
+
+@import 'colors.css';
+
 window {
-	background-color: rgba(20, 21, 30, 0.1);
-}
-button {
-    color: #ffffff;
-	background-color: rgba(118, 124, 150, 0.1);
-	/* border-style: solid; */
-	/* border-color: #767c96; */
-	/* border-width: 2px; */
-	border: 2px solid rgb(255, 255, 255);
-	outline: none;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 25%;
-	margin: 10px;
+    font-family: Fira Code Medium;
+    font-size: 16pt;
+    color: #cdd6f4; /* text */
+    background-color: rgba(30, 30, 46, 0.185);
 }
 
-button:focus, button:active, button:hover {
-	background-color: rgba(152, 175, 211, 0.2);
-	outline: none;
-	border: 2px solid #98b0d3;
+button {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20%;
+	margin: 0;
+    background-color: @background;
+    animation: gradient_f 20s ease-in infinite;
+    border-radius: 20px; /* Increased border radius for a more rounded look */
 }
+
+button:focus {
+    background-size: 20%;
+	/* border: 0px; */
+
+}
+
+button:hover {
+    background-color: @color1; 
+    color: @foreground;
+    background-size: 35%;
+    /* margin: 10px; */
+    border-radius: 50px; 
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 20px @color8; 
+	
+}
+
+/* Adjust the size of the icon or content inside the button */
+button span {
+    font-size: 50px; /* Increase the font size */
+}
+
 
 #lock {
-    background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+    background-image: image(url("./icons/lock.png"));
+}
+#lock:hover {
+    background-image: image(url("./icons/lock-hover.png"));
 }
 
 #logout {
-    background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+    background-image: image(url("./icons/logout.png"));
+}
+#logout:hover {
+    background-image: image(url("./icons/logout-hover.png"));
 }
 
 #suspend {
-    background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+    background-image: image(url("./icons/sleep.png"));
 }
-
-#hibernate {
-    background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
+#suspend:hover {
+    background-image: image(url("./icons/sleep-hover.png"));
 }
 
 #shutdown {
-    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+    background-image: image(url("./icons/power.png"));
+}
+#shutdown:hover {
+    background-image: image(url("./icons/power-hover.png"));
 }
 
 #reboot {
-    background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+    background-image: image(url("./icons/restart.png"));
+}
+#reboot:hover {
+    background-image: image(url("./icons/restart-hover.png"));
+}
+
+#hibernate {
+    background-image: image(url("./icons/hibernate.png"));
+}
+#hibernate:hover {
+    background-image: image(url("./icons/hibernate-hover.png"));
 }

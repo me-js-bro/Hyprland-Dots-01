@@ -46,7 +46,6 @@ hex_to_rgba() {
     echo $rgba
 }
 
-
 # Extract colors from colors.json
 colors_file=~/.cache/wal/colors.json
 if [ -f $colors_file ]; then
@@ -56,25 +55,43 @@ if [ -f $colors_file ]; then
   # Usage example
     hex_color="$foreground_color"
     rgba_color=$(hex_to_rgba $hex_color)
+
+    # Set Hyprland active border color based on foreground color
+    hyprland_config=~/.config/hypr/configs/settings.conf
+    sed -i "s/col.active_border .*$/col.active_border = $rgba_color/g" "$hyprland_config"
+
+    # Reload Hyprland configuration (optional)
+    hyprctl reload
 else
     echo "No file found named colors.json"
 fi
 
+
+# Extract colors from colors.json
+kitty_colors=~/.cache/wal/colors-kitty.conf
 kitty=~/.config/hypr/kitty/kitty.conf
+# Define a function to extract a specific color
+extract_color() {
+  color_keyword="$1"
+  grep "^${color_keyword}" $kitty_colors | awk '{print $2}'
+}
+
+# Extract background and foreground colors
+kitty_background_color=$(extract_color "background")
+kitty_foreground_color=$(extract_color "foreground")
 
 # kitty colors
-sed -i "s/background .*$/background $background_color/g" "$kitty"
-sed -i "s/foreground .*$/foreground $foreground_color/g" "$kitty"
+sed -i "s/background .*$/background $kitty_background_color/g" "$kitty"
+sed -i "s/foreground .*$/foreground $kitty_foreground_color/g" "$kitty"
 kitty @ --to=unix:/tmp/kitty.sock quit
-
-# Set Hyprland active border color based on foreground color
-hyprland_config=~/.config/hypr/configs/settings.conf
-sed -i "s/col.active_border .*$/col.active_border = $rgba_color/g" "$hyprland_config"
-
-# Reload Hyprland configuration (optional)
-hyprctl reload
 
 # setting rofi theme
 ln -sf ~/.cache/wal/colors-rofi-dark.rasi ~/.config/hypr/rofi/themes/rofi-pywal.rasi
+
+# setting waybar colors
+ln -sf ~/.cache/wal/colors-waybar.css ~/.config/hypr/waybar/style/theme.css
+
+# setting waybar colors for wlogout
+ln -sf ~/.cache/wal/colors-waybar.css ~/.config/hypr/wlogout/colors.css
 
 # ------------------------

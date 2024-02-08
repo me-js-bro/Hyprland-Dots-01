@@ -1,0 +1,1 @@
+### The colors.css file wii generate everytime you switch the wallpaper.
