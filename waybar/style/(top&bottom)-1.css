@@ -7,23 +7,23 @@
     min-height: 0;
 }
 
-/* #18202A */
+@import 'style/theme.css';
 
 window#waybar {
-    background: rgba(24, 32, 42, 0.096);
-    color: #9DB8C1;
+    background: rgba(24, 32, 42, 0);
+    color: @foreground;
     margin-bottom: 5px;
 }
 
 tooltip {
-    background: #08080A;
+    background: @background;
     opacity: 0.8;
     border-radius: 5px;
-    border: 1px solid #9DB8C1;
+    border: 1px solid @foreground;
 }
 
 tooltip label{
-    color: #9DB8C1;
+    color: @foreground;
 }
 
 #workspaces button {
@@ -110,12 +110,12 @@ tooltip label{
 #custom-ibus,
 #taskbar,
 #backlight {
-    background: #08080A;
+    background: @background;
     opacity: 0.8;
     padding: 0px 10px;
     margin: 3px 0px;
     margin-top: 10px;
-    border: 1px solid #9DB8C1;
+    border-bottom: 2px solid @foreground;
 }
 
 #cpu {
@@ -143,6 +143,7 @@ tooltip label{
 
 #taskbar{
     border-radius: 5px;
+    border: 1px solid @foreground;
 }
 
 #custom-ibus {
@@ -234,7 +235,7 @@ tooltip label{
     border-left: 0px;
     border-right: 0px;
     border-radius: 5px 0 0 5px;
-    border: 1px solid #9DB8C1;
+    border-bottom: 2px solid @foreground;
     border-right: none;
 }
 
@@ -246,7 +247,7 @@ tooltip label{
     /* color: #cba6f7; */
     border-left: 0px;
     border-right: 0px;
-    border: 1px solid #9DB8C1;
+    border-bottom: 2px solid @foreground;
     border-left: none;
 }
 
@@ -256,8 +257,8 @@ tooltip label{
 }
 
 #custom-cava {
-    background: #08080A;
-    color: #9DB8C1;
+    background: @background;
+    color: @foreground;
     opacity: 0.8;
     padding: 0px 10px;
     margin: 3px 0px;
@@ -265,5 +266,5 @@ tooltip label{
     margin-top: 10px;
     border: 0px;
     border-radius: 5px;
-    border: 1px solid #9DB8C1;
+    border-bottom: 2px solid @foreground;
 }

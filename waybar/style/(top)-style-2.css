@@ -121,12 +121,6 @@ tooltip label{
     border: 0px;
 }
 
-#custom-clipboard {
-    border-radius: 0 10px 10px 0;
-    margin-right: 10px;
-    font-size: 20px;
-    padding-right: 20px;
-}
 
 #custom-wallpaper-change {
     font-size: 16px;
@@ -145,8 +139,17 @@ tooltip label{
     background: #eba0ac;
     color: #18202A;
     font-weight: 700;
-    border-radius: 10px;
+    border-radius: 0 10px 10px 0;
     margin-right: 10px;
+}
+
+#custom-clipboard {
+    background-color: #eba0ac;
+    color: #18202A;
+    border-radius: 10px 0 0 10px;
+    margin-right: 0;
+    font-size: 20px;
+    padding-right: 10px;
 }
 
 #network {

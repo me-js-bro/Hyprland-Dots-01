@@ -7,15 +7,15 @@
     min-height: 0;
 }
 
-/* #18202A */
+@import 'style/theme.css';
 
 window#waybar {
     background: rgba(24, 32, 42, 0);
-    color: #9DB8C1;
+    color: @foreground;
 }
 
 tooltip {
-    background: #18202A;
+    background: @background;
     opacity: 0.8;
     border-radius: 10px;
     border-width: 2px;
@@ -111,7 +111,7 @@ tooltip label{
 #custom-ibus,
 #taskbar,
 #backlight {
-    background: #18202A;
+    background: @background;
     opacity: 0.8;
     padding: 0px 10px;
     margin: 3px 0px;

@@ -7,20 +7,22 @@
     min-height: 0;
 }
 
+@import 'style/theme.css';
+
 #window {
 	padding: 1px 0;
 }
 
 window#waybar {
-    background: #18202a;
-    color: #9DB8C1;
-    border-top: 1px solid rgba(157, 184, 193, 0.37);
+    background: @background;
+    color: @foreground;
+    border-top: 1px solid @foreground;
     padding: 0 0;
     /* margin: 0; */
 }
 
 tooltip {
-    background: #18202A;
+    background: @background;
     opacity: 0.8;
     border-radius: 10px;
     border-width: 2px;
@@ -29,18 +31,18 @@ tooltip {
 }
 
 tooltip label{
-    color: #9DB8C1;
+    color: @foreground;
 }
 
 #workspaces button {
     padding: 5px;
-    color: #4f5064;
+    color: @color3;
     margin-right: 5px;
     background-color: rgba(17, 17, 27, 0);
 }
 
 #workspaces button.active {
-    color: #b8bfdd;
+    color: @foreground;
 }
 
 #workspaces button.focused {

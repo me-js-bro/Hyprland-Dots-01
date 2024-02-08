@@ -7,13 +7,15 @@
     min-height: 0;
 }
 
+@import 'style/theme.css';
+
 #window {
 	padding: 1px 0;
 }
 
 window#waybar {
     background: rgba(0, 0, 0, 0.575);
-    color: #dfecf0;
+    color: @foreground;
     border-bottom: 1px solid #9DB8C1;
     padding: 0 0;
     /* margin: 0; */
