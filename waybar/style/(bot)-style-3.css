@@ -7,16 +7,16 @@
     min-height: 0;
 }
 
-/* #18202A */
+@import 'style/theme.css';
 
 window#waybar {
     background: rgba(0, 0, 0, 0.479);
-    color: #eff5f7;
+    color: @foreground;
     margin-bottom: 5px;
 }
 
 tooltip {
-    background: #08080A;
+    background: @background;
     opacity: 0.8;
     border-radius: 3px;
     border: 1px solid #9DB8C1;
@@ -28,13 +28,13 @@ tooltip label{
 
 #workspaces button {
     padding: 5px;
-    color: #4f5064;
+    color: @color3;
     margin-right: 5px;
     background-color: rgba(17, 17, 27, 0);
 }
 
 #workspaces button.active {
-    color: #b8bfdd;
+    color: @color15;
 }
 
 #workspaces button.focused {
@@ -110,12 +110,12 @@ tooltip label{
 #custom-ibus,
 #taskbar,
 #backlight {
-    background: rgba(0, 0, 0, 0.747);
+    background: @background;;
     opacity: 0.8;
     padding: 0px 10px;
     margin: 3px 0px;
     margin-top: 7px;
-    border: 1px solid #cce6ee;
+    border: 1px solid @foreground;
 }
 
 #cpu {
@@ -131,6 +131,7 @@ tooltip label{
     margin-right: 3px;
     font-size: 20px;
     padding-right: 13px;
+    color: @13;
 }
 
 #custom-wallpaper-change {
@@ -139,6 +140,7 @@ tooltip label{
     margin-right: 3px;
     border-radius: 0 3px 3px 0;
     border-left: none;
+    color: @color9;
 }
 
 #taskbar{
@@ -148,16 +150,19 @@ tooltip label{
 #custom-ibus {
     border-radius: 3px;
     margin-right: 3px;
+    color: @color11;
 }
 
 #network {
     margin-right: 3px;
     border-radius: 3px;
+    color: @color4;
 }
 
 #custom-updater {
     margin-right: 3px;
     border-radius: 3px;
+    color: @color2;
 }
 
 #tray, #custom-lock_screen, #temperature, #backlight, #custom-launch_rofi, #cpu {
@@ -189,10 +194,8 @@ tooltip label{
     border-radius: 3px 0 0 3px;
     margin-right: 0;
     border-right: none;
-}
-
-#custom-light_dark {
     padding: 0 15px;
+    color: @color6;
 }
 
 #custom-weather {
@@ -235,19 +238,20 @@ tooltip label{
     border-left: 0px;
     border-right: 0px;
     border-radius: 3px 0 0 3px;
-    border: 1px solid #9DB8C1;
+    border: 1px solid @foreground;
     border-right: none;
 }
 
 #clock {
     border-radius: 3px 0 0 3px;
+    color: @color3;
 }
 
 #pulseaudio.microphone {
     /* color: #cba6f7; */
     border-left: 0px;
     border-right: 0px;
-    border: 1px solid #9DB8C1;
+    border: 1px solid @foreground;
     border-left: none;
 }
 

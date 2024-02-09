@@ -7,14 +7,16 @@
     min-height: 0;
 }
 
+@import 'style/theme.css';
+
 #window {
 	padding: 1px 0;
 }
 
 window#waybar {
     background: rgba(0, 0, 0, 0.459);
-    color: #cae6f0;
-    border: 2px solid #9DB8C1;
+    color: @color7;
+    border: 2px solid @foreground;
     padding: 0 0;
     border-radius: 5px;
 }
@@ -25,11 +27,11 @@ tooltip {
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
-    border-color: #9DB8C1;
+    border-color: @color7;
 }
 
 tooltip label{
-    color: #9DB8C1;
+    color: @color7;
 }
 
 #workspaces button {
@@ -200,7 +202,7 @@ tooltip label{
 }
 
 #custom-wallpaper-change, #custom-light_dark {
-    background: #cae6f0;
+    background: @foreground;
     border-radius: 0;
     color: rgba(0, 0, 0, 0.836);
 }
@@ -208,7 +210,7 @@ tooltip label{
 #custom-launch_rofi {
     font-size: 20px;
     color: #5379b8;
-    background: #cae6f0;
+    background: @foreground;
     border-radius: 0 0 0 3px;
     margin-left: 2px;
 }
@@ -221,7 +223,7 @@ tooltip label{
 /* common- right */
 
 #custom-power_btn {
-    background: #cae6f0;
+    background: @foreground;
     color: red;
     padding: 0 15px;
     padding-bottom: 2px;
@@ -230,7 +232,7 @@ tooltip label{
 }
 
 #network {
-    background: #cae6f0;
+    background: @foreground;
     border-radius: 0;
     color: rgba(0, 0, 0, 0.836);
     padding-left: 15px;

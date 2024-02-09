@@ -7,7 +7,7 @@
     min-height: 0;
 }
 
-/* #18202A */
+@import 'style/theme.css';
 
 window#waybar {
     background: rgba(24, 32, 42, 0.096);

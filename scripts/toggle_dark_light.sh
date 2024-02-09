@@ -29,6 +29,7 @@ if [ "$current_mode" == "dark" ]; then
     # Switch to light mode
 
     # rofi themes will be set by pywal
+    ln -sf ~/.config/hypr/rofi/themes/config-light.rasi ~/.config/hypr/rofi/config.rasi
 
     # gtk theme
     gsettings set org.gnome.desktop.interface gtk-theme "theme-light"
@@ -43,6 +44,7 @@ else
     # Switch to dark mode
 
     # rofi themes will be set by pywal
+    ln -sf ~/.config/hypr/rofi/themes/config.rasi ~/.config/hypr/rofi/config.rasi
 
     # gtk theme
     gsettings set org.gnome.desktop.interface gtk-theme "theme"

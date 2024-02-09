@@ -7,14 +7,16 @@
     min-height: 0;
 }
 
+@import 'style/theme.css';
+
 #window {
 	padding: 1px 0;
 }
 
 window#waybar {
-    background: #18202a;
-    color: #9DB8C1;
-    border-top: 1px solid rgba(157, 184, 193, 0.37);
+    background: @background;
+    color: @color7;
+    border-top: 1px solid @foreground;
     padding: 0 0;
     /* margin: 0; */
 }
