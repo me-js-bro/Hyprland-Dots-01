@@ -87,6 +87,7 @@ kitty @ --to=unix:/tmp/kitty.sock quit
 
 # setting rofi theme
 ln -sf ~/.cache/wal/colors-rofi-dark.rasi ~/.config/hypr/rofi/themes/rofi-pywal.rasi
+ln -sf ~/.cache/wal/colors-rofi-light.rasi ~/.config/hypr/rofi/themes/rofi-pywal-light.rasi
 
 # setting waybar colors
 ln -sf ~/.cache/wal/colors-waybar.css ~/.config/hypr/waybar/style/theme.css

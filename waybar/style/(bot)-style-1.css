@@ -7,15 +7,15 @@
     min-height: 0;
 }
 
-/* #18202A */
+@import 'style/theme.css';
 
 window#waybar {
     background: rgba(24, 32, 42, 0);
-    color: #9DB8C1;
+    color: @foreground;
 }
 
 tooltip {
-    background: #18202A;
+    background: @background;
     opacity: 0.8;
     border-radius: 10px;
     border-width: 2px;
@@ -24,18 +24,18 @@ tooltip {
 }
 
 tooltip label{
-    color: #9DB8C1;
+    color: @foreground;
 }
 
 #workspaces button {
     padding: 5px;
-    color: #4f5064;
+    color: @color2;
     margin-right: 5px;
     background-color: rgba(17, 17, 27, 0);
 }
 
 #workspaces button.active {
-    color: #b8bfdd;
+    color: @foreground;
 }
 
 #workspaces button.focused {
@@ -111,7 +111,7 @@ tooltip label{
 #custom-ibus,
 #taskbar,
 #backlight {
-    background: #18202A;
+    background: @background;
     opacity: 0.8;
     padding: 0px 10px;
     margin: 3px 0px;

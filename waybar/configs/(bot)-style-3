@@ -14,5 +14,15 @@
     
         "modules-center": [],
     
-        "modules-right": ["tray", "custom/updater", "custom/light_dark","custom/wallpaper-change", "custom/ibus", "pulseaudio","pulseaudio#microphone", "network", "custom/clipboard", "clock","custom/power_btn"]
+        "modules-right": ["tray", "custom/updater", "custom/light_dark","custom/wallpaper-change", "custom/ibus", "pulseaudio","pulseaudio#microphone", "network", "custom/clipboard", "clock","custom/power_btn"],
+
+        "network": {
+            // "interface": "wlp2*", // (Optional) To force the use of this interface
+            "format-wifi": "󰤨 {essid}",
+            "format-ethernet": "",
+            "tooltip-format": " {bandwidthUpBytes}  {bandwidthDownBytes}",
+            "format-linked": "󱘖 {ifname} (No IP)",
+            "format-disconnected": " Disconnected",
+            "interval": 5
+        }
     }
