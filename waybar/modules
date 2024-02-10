@@ -18,6 +18,16 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "󰤨 {essid}",
+        "format-ethernet": "",
+        "tooltip-format": " {bandwidthUpBytes}  {bandwidthDownBytes}",
+        "format-linked": "󱘖 {ifname} (No IP)",
+        "format-disconnected": " Disconnected",
+        "interval": 5
+    },
+
+    "network#vertical": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "󰤨 {essid}",
         "format-ethernet": "󱘖 Wired",
         "tooltip-format": "󱘖 {ifname} (No IP)",
         "format-linked": "󱘖 {ifname} (No IP)",
@@ -49,12 +59,12 @@
         // },
         "format-icons": {
             // for arch
-            "active": "󰮯",
-            "default": ""
+            // "active": "󰮯",
+            // "default": ""
 
             // for fedora
-            //  "active": "󰣛",  
-            //  "default": ""
+             "active": "󰣛",  
+             "default": ""
 
             // for opensuse
             //"active": "",
@@ -76,6 +86,13 @@
         "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
     },
 
+    "cpu#vertical": {
+        "interval": 10,
+        // "format": "󰍛 {usage}%",
+        "format": "{icon0}{icon1}{icon2}\n{usage}%",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+    },
+
     "disk": {
         "interval": 30,
         "format": " {free}",
@@ -93,6 +110,15 @@
         "tooltip-format": " {used:0.1f}GB/{total:0.1f}GB"
     },
 
+    "memory#vertical": {
+        "interval": 30,
+        "format": "  󰾅 \n{used: 0.1f}G",
+        // "format-icons": "󰾅",
+        // "format-alt": "󰾅 {used}GB",
+        "tooltip": true,
+        "tooltip-format": " {used:0.1f}GB/{total:0.1f}GB"
+    },
+
     "tray": {
         "icon-size": 18,
         "spacing": 10
@@ -101,6 +127,27 @@
     "clock": {
         "format": " {: %I:%M %p}",
         "format-alt": "{: %d-%m-%Y}",
+        "on-clock-right": "exec gnome-calendar",
+        "tooltip": true,
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode"          : "year",
+            "mode-mon-col"  : 3,
+            "weeks-pos"     : "right",
+            "on-scroll"     : 1,
+            "format": {
+            "months":     "<span color='#ffead3'><b>{}</b></span>",
+            "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+            "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+            "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+            "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                    }
+                    }
+    },
+
+    "clock#vertical": {
+        "format": " {:\n\n%I\n%M\n%p\n}",
+        "format-alt": "{:\n\n%d\n%m\n%y\n}",
         "on-clock-right": "exec gnome-calendar",
         "tooltip": true,
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
@@ -191,9 +238,9 @@
     },
 
     "custom/launch_rofi": {
-        "format": "",   // for arch
-        //  "format": "󰣛",   // for fedora
-        //"format": "",  // for opensuse
+        // "format": "",   // for arch
+         "format": "󰣛",   // for fedora
+        // "format": "",  // for opensuse
         "on-click": "rofi -n -show drun",
         "on-click-right": "rofi -n -show filebrowser",
         "tooltip": false
@@ -224,6 +271,15 @@
         "exec": "~/.config/hypr/scripts/systemupdate.sh",
         "return-type": "json",
         "format": " {}",
+        "on-click": "~/.config/hypr/scripts/systemupdate.sh up",
+        "interval": 86400, // once every day
+        "tooltip": true
+    },
+
+    "custom/updater#vertical": {
+        "exec": "~/.config/hypr/scripts/systemupdate.sh",
+        "return-type": "json",
+        "format": " \n{}",
         "on-click": "~/.config/hypr/scripts/systemupdate.sh up",
         "interval": 86400, // once every day
         "tooltip": true
@@ -266,5 +322,17 @@
     //"exec": "~/.config/waybar/scripts/Weather.py",
     "exec-if": "ping wttr.in -c1",
     "tooltip" : true
-    }
+    },
+
+    "custom/weather#vertical": {
+        "format": "   \n{}",
+        "format-alt": "{alt}:\n{}",
+        "format-alt-click": "click",
+        "interval": 3600,
+        "return-type": "json",
+        "exec": "~/.config/hypr/scripts/Weather.sh",
+        //"exec": "~/.config/waybar/scripts/Weather.py",
+        "exec-if": "ping wttr.in -c1",
+        "tooltip" : true
+        }
 }
