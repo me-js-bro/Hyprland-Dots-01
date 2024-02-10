@@ -35,7 +35,9 @@ if [ "$current_mode" == "dark" ]; then
     gsettings set org.gnome.desktop.interface gtk-theme "theme-light"
 
     # set vs code theme
-    sed -i 's/"workbench.colorTheme": "Theme Flat"/"workbench.colorTheme": "Atom One Light"/g' "$vs_code_settings"
+    if [ -f "$vs_code_settings" ]; then
+        sed -i 's/"workbench.colorTheme": "Theme Flat"/"workbench.colorTheme": "Atom One Light"/g' "$vs_code_settings"
+    fi
 
     # switch wallpaper
     set_random_wallpaper_swww "$wallpaper_dir_light"
@@ -50,7 +52,9 @@ else
     gsettings set org.gnome.desktop.interface gtk-theme "theme"
 
     # set vs code theme
-    sed -i 's/"workbench.colorTheme": "Atom One Light"/"workbench.colorTheme": "Theme Flat"/g' "$vs_code_settings"
+    if [ -f "$vs_code_settings" ]; then
+        sed -i 's/"workbench.colorTheme": "Atom One Light"/"workbench.colorTheme": "Theme Flat"/g' "$vs_code_settings"
+    fi
 
     # set wallpaper
     set_random_wallpaper_swww "$wallpaper_dir_dark"
