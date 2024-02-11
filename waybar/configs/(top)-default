@@ -13,5 +13,5 @@
 
     "modules-center": ["wlr/taskbar"],
 
-    "modules-right": ["tray", "custom/updater", "custom/light_dark","custom/wallpaper-change", "custom/ibus", "custom/clipboard", "pulseaudio","pulseaudio#microphone", "network", "clock","custom/power_btn"]
+    "modules-right": ["tray", "custom/updater", "custom/swaync", "custom/light_dark","custom/wallpaper-change", "custom/ibus", "custom/clipboard", "pulseaudio","pulseaudio#microphone", "network", "clock","custom/power_btn"]
 }

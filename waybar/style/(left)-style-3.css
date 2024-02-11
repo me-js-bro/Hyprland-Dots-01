@@ -111,6 +111,7 @@ tooltip label{
 #workspaces,
 #custom-ibus,
 #taskbar,
+#custom-swaync,
 #backlight {
     background: @background;
     /* opacity: 0.8; */
@@ -118,6 +119,10 @@ tooltip label{
     margin: 3px 0px;
     margin-top: 10px;
     border: 0px;
+}
+
+#custom-swaync {
+    border-radius: 10px;
 }
 
 #custom-clipboard {

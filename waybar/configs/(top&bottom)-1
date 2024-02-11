@@ -15,7 +15,7 @@
     
         "modules-center": [],
     
-        "modules-right": ["tray", "custom/updater", "custom/light_dark","custom/wallpaper-change", "custom/ibus", "pulseaudio","pulseaudio#microphone", "network", "clock","custom/power_btn"]
+        "modules-right": ["tray", "custom/updater", "custom/light_dark","custom/wallpaper-change", "custom/ibus", "pulseaudio","pulseaudio#microphone", "custom/swaync", "network", "clock","custom/power_btn"]
     },
     {
         "include": "$HOME/.config/hypr/waybar/modules",

@@ -15,7 +15,7 @@
 
     "modules-center": [],
 
-    "modules-right": ["tray", "custom/updater#vertical", "custom/light_dark", "pulseaudio","pulseaudio#microphone", "network", "clock#vertical","custom/power_btn"],
+    "modules-right": ["tray", "custom/updater#vertical", "custom/light_dark", "pulseaudio","pulseaudio#microphone", "network", "custom/swaync#vertical", "clock#vertical","custom/power_btn"],
 
     "network#vertical": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
