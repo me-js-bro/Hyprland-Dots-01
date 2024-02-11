@@ -27,16 +27,18 @@ if [ -f /etc/arch-release ]; then
     # Show tooltip
     if [ $upd -eq 0 ] ; then
         echo "{\"text\":\"$upd\", \"tooltip\":\" Packages are up to date\"}"
+       # notify-send "\" Packages are up to date\""
     else
         echo "{\"text\":\"$upd\", \"tooltip\":\"󱓽 Official $ofc\n󱓾 AUR $aur$fpk_disp\"}"
+        notify-send "\"󱓽 Updates Available: $upd\""
     fi
 
     update_packages() {
         kitty --title systemupdate sh -c "${aurhlpr} -Syu $fpk_exup"
         if [ $upd -eq 0 ] ; then
-            dunstify "Packages updated successfully!"
+            notify-send "Packages updated successfully"
         else
-            dunstify "Couldnot update your packages."
+            notify-send "Couldnot update your packages."
         fi
 }
 
@@ -49,8 +51,10 @@ elif [ -f /etc/fedora-release ]; then
     # Show tooltip
     if [ $upd -eq 0 ] ; then
         echo "{\"text\":\"$upd\", \"tooltip\":\" Packages are up to date\"}"
+       # notify-send "\" Packages are up to date\""
     else
         echo "{\"text\":\"$upd\", \"tooltip\":\"󱓽 Updates Available: $upd\"}"
+        notify-send "\"󱓽 Updates Available: $upd\""
     fi
 
     sleep 1
@@ -58,9 +62,9 @@ elif [ -f /etc/fedora-release ]; then
     update_packages() {
         kitty --title systemupdate sh -c "sudo dnf update -y"
         if [ $upd -eq 0 ] ; then
-            dunstify "Packages updated successfully!"
+            notify-send "Packages updated successfully"
         else
-            dunstify "Couldnot update your packages."
+            notify-send "Couldnot update your packages."
         fi
 }
 

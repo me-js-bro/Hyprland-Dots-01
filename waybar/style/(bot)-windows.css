@@ -15,6 +15,7 @@
 
 window#waybar {
     background: @background;
+    opacity: 0.9;
     color: @color7;
     border-top: 1px solid @foreground;
     padding: 0 0;
@@ -22,7 +23,7 @@ window#waybar {
 }
 
 tooltip {
-    background: #18202A;
+    background: @background;
     opacity: 0.8;
     border-radius: 10px;
     border-width: 2px;
@@ -31,7 +32,7 @@ tooltip {
 }
 
 tooltip label{
-    color: #9DB8C1;
+    color: @foreground;
 }
 
 #workspaces button {
@@ -118,6 +119,7 @@ tooltip label{
 #custom-ibus,
 #taskbar,
 #custom-swaync,
+#mpris,
 #backlight {
     background: rgba(24, 32, 42, 0);
     opacity: 0.8;

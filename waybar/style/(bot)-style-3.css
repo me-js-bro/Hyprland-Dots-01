@@ -110,6 +110,7 @@ tooltip label{
 #custom-ibus,
 #taskbar,
 #custom-swaync,
+#mpris,
 #backlight {
     background: @background;;
     opacity: 0.8;
@@ -117,6 +118,12 @@ tooltip label{
     margin: 3px 0px;
     margin-top: 7px;
     border: 1px solid @foreground;
+}
+
+#mpris {
+    border-radius: 3px;
+    margin-right: 3px;
+    color: @color2;
 }
 
 #custom-swaync {

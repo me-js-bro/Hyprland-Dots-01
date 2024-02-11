@@ -7,7 +7,7 @@
     min-height: 0;
 }
 
-/* #18202A */
+@import 'style/theme.css';
 
 window#waybar {
     background: rgba(24, 32, 42, 0);
@@ -111,13 +111,18 @@ tooltip label{
 #custom-ibus,
 #taskbar,
 #custom-swaync,
+#mpris,
 #backlight {
-    background: #18202A;
+    background: @background;
     opacity: 0.8;
     padding: 0px 10px;
     margin: 3px 0px;
     margin-top: 10px;
-    border: 0px;
+}
+
+#mpris {
+    border-radius: 10px;
+    margin-right: 10px;
 }
 
 #custom-swaync {
