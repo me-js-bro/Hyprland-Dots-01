@@ -17,7 +17,7 @@
 
     "modules-center": ["cpu", "memory"],
 
-    "modules-right": ["tray", "pulseaudio","pulseaudio#microphone", "clock", "network", "custom/power_btn"],
+    "modules-right": ["tray", "pulseaudio","pulseaudio#microphone", "custom/swaync", "clock", "network", "custom/power_btn"],
 
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface

@@ -95,4 +95,7 @@ ln -sf ~/.cache/wal/colors-waybar.css ~/.config/hypr/waybar/style/theme.css
 # setting waybar colors for wlogout
 ln -sf ~/.cache/wal/colors-waybar.css ~/.config/hypr/wlogout/colors.css
 
+# setting waybar colors for swaync
+ln -sf ~/.cache/wal/colors-waybar.css ~/.config/hypr/swaync/colors.css
+
 # ------------------------

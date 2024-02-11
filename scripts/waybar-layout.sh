@@ -31,11 +31,11 @@ apply_config() {
     ln -sf "$style_file" "$waybar_style"
 
     # Check if style is "(bot)-style-3" and CSS file is "(bot)-style-3.css"
-    if [[ "$1" == "(bot)-style-3" && "$style_file" == "$HOME/.config/hypr/waybar/style/(bot)-style-3.css" ]]; then
-        sed -i 's/#blurls=waybar/blurls=waybar/g' "$environment_config"
-    else
-        sed -i 's/blurls=waybar/#blurls=waybar/g' "$environment_config"
-    fi
+    # if [[ "$1" == "(bot)-style-3" && "$style_file" == "$HOME/.config/hypr/waybar/style/(bot)-style-3.css" ]]; then
+    #     sed -i 's/#blurls=waybar/blurls=waybar/g' "$environment_config"
+    # else
+    #     sed -i 's/blurls=waybar/#blurls=waybar/g' "$environment_config"
+    # fi
 
     restart_waybar_if_needed
 }

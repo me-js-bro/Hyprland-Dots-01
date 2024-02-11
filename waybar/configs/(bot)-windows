@@ -13,7 +13,7 @@
 
     "modules-center": ["custom/launch_rofi", "wlr/taskbar"],
 
-    "modules-right": ["tray", "custom/updater", "custom/light_dark","custom/wallpaper-change", "custom/ibus", "custom/clipboard", "pulseaudio", "network", "clock","custom/power_btn"],
+    "modules-right": ["tray", "custom/updater", "custom/light_dark","custom/wallpaper-change", "custom/ibus", "custom/clipboard", "pulseaudio", "custom/swaync", "network", "clock","custom/power_btn"],
 
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface

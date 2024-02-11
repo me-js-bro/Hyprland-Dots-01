@@ -16,7 +16,7 @@
 - Now run this command. It will create symbolic link of all the main dirs:
    ```
    ln -sf ~/.config/hypr/btop ~/.config/btop
-        ln -sf ~/.config/hypr/dunst ~/.config/dunst
+        ln -sf ~/.config/hypr/swaync ~/.config/swaync
         ln -sf ~/.config/hypr/kitty ~/.config/kitty
         ln -sf ~/.config/hypr/cava ~/.config/cava
         ln -sf ~/.config/hypr/neofetch ~/.config/neofetch

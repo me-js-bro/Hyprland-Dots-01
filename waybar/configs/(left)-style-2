@@ -14,7 +14,7 @@
 
     "modules-left": [],
 
-    "modules-center": ["custom/launch_rofi", "tray", "custom/light_dark", "pulseaudio","pulseaudio#microphone", "network", "clock#vertical","custom/power_btn"],
+    "modules-center": ["custom/launch_rofi", "tray", "custom/light_dark", "custom/swaync#vertical", "pulseaudio","pulseaudio#microphone", "network", "clock#vertical","custom/power_btn"],
 
     "modules-right": [],
 

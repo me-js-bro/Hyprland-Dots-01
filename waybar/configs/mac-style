@@ -16,7 +16,7 @@
     
         "modules-center": ["clock"],
     
-        "modules-right": ["tray", "custom/updater", "custom/light_dark","custom/wallpaper-change", "custom/ibus", "pulseaudio", "network", "custom/power_btn"],
+        "modules-right": ["tray", "custom/updater", "custom/light_dark","custom/wallpaper-change", "custom/ibus", "pulseaudio", "custom/swaync", "network", "custom/power_btn"],
     
         "network": {
             "format-wifi": "󰤨 {essid}",
