@@ -10,7 +10,7 @@
 @import 'style/theme.css';
 
 window#waybar {
-    background: rgba(24, 32, 42, 0.096);
+    background: rgba(24, 32, 42, 0);
     color: #9DB8C1;
     margin-bottom: 5px;
 }
@@ -110,13 +110,19 @@ tooltip label{
 #custom-ibus,
 #taskbar,
 #custom-swaync,
+#mpris,
 #backlight {
-    background: #08080A;
+    background: @background;
     opacity: 0.8;
     padding: 0px 10px;
     margin: 3px 0px;
     margin-top: 10px;
     border: 1px solid #9DB8C1;
+}
+
+#mpris {
+    margin-right: 10px;
+    border-radius: 5px;
 }
 
 #custom-swaync {

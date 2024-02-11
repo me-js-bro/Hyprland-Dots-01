@@ -11,17 +11,17 @@
     "control-center-margin-right": 7,
     "control-center-margin-left": 0,
   	"notification-2fa-action": true,
-  	"notification-inline-replies": false,
-    "notification-icon-size": 24,
+  	"notification-inline-replies": true,
+    "notification-icon-size": 60,
     "notification-body-image-height": 100,
     "notification-body-image-width": 200,
     "timeout": 6,
     "timeout-low": 3,
     "timeout-critical": 0,
     "fit-to-screen": false,
-    "control-center-width": 400,
-    "control-center-height": 1027,
-    "notification-window-width": 400,
+    "control-center-width": 500,
+    "control-center-height": 900,
+    "notification-window-width": 300,
     "keyboard-shortcuts": true,
     "image-visibility": "when available",
     "transition-time": 200,
@@ -52,7 +52,7 @@
         },
         "mpris": {
             "image-size": 60,
-            "image-radius": 10
+            "image-radius": 5
         },
         "volume": {
             "label": "󰕾"
@@ -62,25 +62,22 @@
         },
         "buttons-grid": {
             "actions": [
-                {
-                    "label": "",
-                    "command": "hyprctl dispatch exit"
-                },
+                
                 {
                     "label": "󰕾",
-                    "command": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+                    "command": "pavucontrol"
                 },
                 {
                     "label": "󰌾",
-                    "command": "~/.config/hypr/scripts/LockScreen.sh"
+                    "command": "swaylock"
                 },
                 {
                     "label": "󰂯",
                     "command": "blueman-manager"
                 },
                 {
-                    "label": "󰌾",
-                    "command": "~/.config/hypr/scripts/LockScreen.sh"
+                    "label": "󰚰",
+                    "command": "kitty --title systemupdate sh -c 'sudo dnf update -y'"
                 },
                 {
                     "label": "󰜉",

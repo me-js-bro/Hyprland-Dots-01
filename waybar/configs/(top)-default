@@ -13,5 +13,16 @@
 
     "modules-center": ["wlr/taskbar"],
 
-    "modules-right": ["tray", "custom/updater", "custom/swaync", "custom/light_dark","custom/wallpaper-change", "custom/ibus", "custom/clipboard", "pulseaudio","pulseaudio#microphone", "network", "clock","custom/power_btn"]
+    "modules-right": ["tray", "custom/updater", "custom/swaync", "mpris", "custom/light_dark","custom/wallpaper-change", "custom/ibus", "custom/clipboard", "pulseaudio","pulseaudio#microphone", "network", "clock","custom/power_btn"],
+
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "󰤨 {essid}",
+        "format-ethernet": "",
+        "format-alt": " {bandwidthUpBytes}  {bandwidthDownBytes}",
+        "tooltip-format": " {bandwidthUpBytes}  {bandwidthDownBytes}",
+        "format-linked": "󱘖 {ifname} (No IP)",
+        "format-disconnected": " Disconnected",
+        "interval": 5
+    },
 }
