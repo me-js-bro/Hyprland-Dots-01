@@ -366,9 +366,11 @@
      },
 
      "custom/clipboard": {
-        "format": "󰅌",
-        "on-click": "~/.config/hypr/scripts/cliphist.sh c",
-        "on-click-right": "~/.config/hypr/scripts/cliphist.sh w"
+        "format": "󰅌 {}",
+        "exec": "~/.config/hypr/scripts/cliphist.sh l",
+        "on-click": "~/.config/hypr/scripts/cliphist.sh c && ~/.config/hypr/scripts/Refresh.sh",
+        "on-click-right": "~/.config/hypr/scripts/cliphist.sh w && ~/.config/hypr/scripts/Refresh.sh",
+        "interval": 1
      },
 
      "custom/wallpaper-change": {

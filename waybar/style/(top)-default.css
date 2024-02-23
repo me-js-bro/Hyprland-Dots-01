@@ -132,10 +132,9 @@ tooltip label{
 }
 
 #custom-clipboard {
-    border-radius: 0 10px 10px 0;
+    border-radius: 10px;
     margin-right: 10px;
-    font-size: 20px;
-    padding-right: 15px;
+    font-size: 14px;
 }
 
 #custom-wallpaper-change {
