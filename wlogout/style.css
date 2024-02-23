@@ -15,7 +15,7 @@ button {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20%;
-	margin: 0;
+	margin: 5px;
     background-color: @background;
     animation: gradient_f 20s ease-in infinite;
     border-radius: 20px; /* Increased border radius for a more rounded look */
@@ -31,7 +31,7 @@ button:hover {
     background-color: @color1; 
     color: @foreground;
     background-size: 35%;
-    /* margin: 10px; */
+    margin: 10px;
     border-radius: 50px; 
     transition: all 0.3s ease-in-out;
     box-shadow: 0 0 20px @color8; 

@@ -45,6 +45,7 @@ yad --width=$dynamic_width --height=$dynamic_height \
 " + SHIFT + F" "FilrBrowser" "(Rofi)" \
 " + E" "Open File Manager" "(Thunar)" \
 " + SHIFT + E" "Open File Manager" "(Dolphin)" \
+" + CTRL + E" "Choose to edit dotfiles" "(Rofi)" \
 " + Q" "close active window" "(not kill)" \
 " + ALT + C" "Clipboard Manager" "(Cliphist)" \
 " + ALT + W" "Clear Clipboard History" "(Cliphist)" \
