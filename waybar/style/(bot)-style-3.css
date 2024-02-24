@@ -143,9 +143,9 @@ tooltip label{
 #custom-clipboard {
     border-radius: 3px;
     margin-right: 3px;
-    font-size: 20px;
+    font-size: 15px;
     padding-right: 13px;
-    color: @13;
+    color: @color3;
 }
 
 #custom-wallpaper-change {

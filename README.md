@@ -1,5 +1,12 @@
 <h2>This is my Hyprland Dotfiles first version. You can download and use the dotfiles. But if you want a full installer script, then I have anothe repository for that.</h2>
 
+## Screenshots
+<p align="center">
+   <img align="center" width="49%" src="https://github.com/me-js-bro/Screen-Shots/blob/main/arch/1.png?raw=true" /> <img align="center" width="49%" src="https://github.com/me-js-bro/Screen-Shots/blob/main/fedora/3.png?raw=true" />
+
+   <img align="center" width="49%" src="https://github.com/me-js-bro/Screen-Shots/blob/main/fedora/5.png?raw=true" /> <img align="center" width="49%" src="https://github.com/me-js-bro/Screen-Shots/blob/main/fedora/4.png?raw=true" />
+</p>
+
 <hr>
 
 ### How to use these files:
@@ -25,7 +32,13 @@
         ln -sf ~/.config/hypr/waybar ~/.config/waybar
         ln -sf ~/.config/hypr/wlogout ~/.config/wlogout
    ```
-- If you need to change anything, you have to change it inside the `~/.config/hypr` directory.
+- Now make all the necessary script executable. Run this command:
+   ```
+   chmod +x ~/.config/hypr/scripts/*
+   ```
+<hr>
+
+## If you need to change anything, you have to change it inside the `~/.config/hypr` directory.
 
 #### But if you want to automate all these things along with installing some important packages and fonts, just follow the links below. <br>
 
