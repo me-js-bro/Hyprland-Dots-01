@@ -85,6 +85,113 @@ sed -i "s/background .*$/background $kitty_background_color/g" "$kitty"
 sed -i "s/foreground .*$/foreground $kitty_foreground_color/g" "$kitty"
 kitty @ --to=unix:/tmp/kitty.sock quit
 
+# Extract colors from colors.json
+colors_file=~/.cache/wal/colors.json
+if [ -f $colors_file ]; then
+    background_color=$(jq -r '.special.background' "$colors_file")
+    foreground_color=$(jq -r '.special.foreground' "$colors_file")
+
+    # Update VS Code settings
+    vscode_settings_file="$HOME/.config/Code/User/settings.json"
+    cat <<EOF >"$vscode_settings_file"
+{
+    "editor.mouseWheelZoom": true,
+    "files.autoSave": "afterDelay",
+    "workbench.startupEditor": "none",
+    "editor.fontSize": 20,
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontLigatures": true,
+    "workbench.colorCustomizations": {
+        "editor.background": "$background_color",
+        "sideBar.background": "$background_color",
+        "sideBar.border": "$background_color",
+        "sideBar.foreground": "$foreground_color",
+        "editorGroupHeader.tabsBackground": "#191b274b",
+        "activityBar.background": "$background_color",
+        "activityBar.border": "$background_color",
+        "activityBar.foreground": "$foreground_color",
+        "tab.activeBackground": "#13151f",
+        "tab.activeForeground": "#ffffff",
+        "tab.activeBorder": "$background_color",
+        "tab.border": "$background_color",
+        "tab.inactiveBackground": "$background_color",
+        "tab.inactiveForeground": "$foreground_color",
+    },
+    "window.menuBarVisibility": "toggle",
+    "workbench.statusBar.visible": false,
+    "breadcrumbs.enabled": false,
+    "editor.smoothScrolling": true,
+    "editor.scrollbar.vertical": "hidden",
+    "editor.mouseWheelScrollSensitivity": 2,
+    "editor.wordWrap": "on",
+    "editor.cursorBlinking": "expand",
+    "terminal.integrated.fontSize": 18,
+    "workbench.colorTheme": "Theme Darker",
+    "workbench.iconTheme": "material-icon-theme",
+    "explorer.confirmDelete": false,
+    "editor.minimap.enabled": true,
+    "git.enableSmartCommit": true
+}
+EOF
+fi
+
+# firefox colors changine, (test)
+# Extract colors from colors.json
+colors_file=~/.cache/wal/colors.json
+if [ -f $colors_file ]; then
+    background_color=$(jq -r '.special.background' "$colors_file")
+    foreground_color=$(jq -r '.special.foreground' "$colors_file")
+
+    # Function to get the Firefox profile directory
+get_firefox_profile_dir() {
+    local profile_dir
+    profile_dir=$(find "$HOME/.mozilla/firefox/" -maxdepth 1 -type d -name '*.default-release' -print -quit)
+    echo "$profile_dir"
+}
+
+# Get the Firefox profile directory
+firefox_profile_dir=$(get_firefox_profile_dir)
+
+if [ -z "$firefox_profile_dir" ]; then
+    echo "Firefox profile directory not found. Exiting script."
+    exit 1
+fi
+    firefox_chrome_dir="$firefox_profile_dir/chrome"
+
+    # Create the chrome directory if it doesn't exist
+    mkdir -p "$firefox_chrome_dir"
+
+    # Create or append to the userChrome.css file
+    firefox_css_file="$firefox_chrome_dir/userChrome.css"
+    touch $firefox_css_file
+    cat <<EOF >"$firefox_css_file"
+/* userChrome.css */
+:root {
+    --background-color: $background_color !important;
+    --foreground-color: $foreground_color !important;
+    --toolbar-bgcolor: $background_color !important;
+    --toolbar-color: $foreground_color !important;
+}
+
+#nav-bar { background-color: var(--toolbar-bgcolor) !important; color: var(--toolbar-color) !important; }
+#navigator-toolbox { background-color: var(--background-color) !important; color: var(--foreground-color) !important; }
+
+/* Set home page background color */
+#home-button { background-color: var(--toolbar-bgcolor) !important; }
+
+/* Set background color for the entire browser window */
+@-moz-document url-prefix("chrome://browser/content/browser.xhtml") {
+    #browser {
+        background-color: var(--background-color) !important;
+    }
+}
+EOF
+
+    # Restart Firefox to apply changes
+    pkill firefox
+fi
+
+
 # setting rofi theme
 ln -sf ~/.cache/wal/colors-rofi-dark.rasi ~/.config/hypr/rofi/themes/rofi-pywal.rasi
 ln -sf ~/.cache/wal/colors-rofi-light.rasi ~/.config/hypr/rofi/themes/rofi-pywal-light.rasi
