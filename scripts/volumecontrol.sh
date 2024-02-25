@@ -45,6 +45,8 @@ get_icon() {
         echo "$iDIR/vol-65.svg"
     elif [[ "${current%\%}" = 70 ]]; then
         echo "$iDIR/vol-70.svg"
+    elif [[ "${current%\%}" = 75 ]]; then
+        echo "$iDIR/vol-75.svg"
     elif [[ "${current%\%}" = 80 ]]; then
         echo "$iDIR/vol-80.svg"
     elif [[ "${current%\%}" = 85 ]]; then
