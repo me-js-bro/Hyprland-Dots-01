@@ -153,8 +153,8 @@ tooltip label{
 }
 
 #custom-ibus {
-    border-radius: 10px 0 0 10px;
-    margin-right: 0;
+    border-radius: 10px;
+    margin-right: 10px;
 }
 
 #network {
