@@ -47,3 +47,34 @@
 #### To install Hyprland and copy the dotfiles on Fedora Linux, please visit [Here](https://github.com/me-js-bro/Fedora-Hyprland).
 
 #### To install Hyprland and copy the dotfiles on OpenSuse (Tumbleweed), please visit [Here](https://github.com/me-js-bro/OpenSuse-Hyprland).
+
+
+<br>
+
+
+ <h1 align="center">Contributing on this project...</h1>
+<h4>Well I could not add so many features on this project that are usefull for laptops <b><i>(Because I do not have any laptop)</i></b>. I would like you to contribute on this project and make the scripts and dotfiles better, if you are interested.</h4>
+
+ ### What to do:
+
+1) Fork this repository.
+2) Make sure to uncheck the Copy the `main` branch only, under the Description option. This will copy the development branch also
+3) After forking, Clone the development branch of the forked repository in your PC. example: <br>
+    `git clone --depth=1 -b development https://github.com/your_github_user_name/Fedora-Hyprland.git`
+5) Create a branch with your name on the forked repository ( GitHub Name )
+6) Commit the changes with some description. For example:<br>
+    `git commit -m "added this feature in the _directory"`
+7) Push changes to your created branch, For example: <br>
+    `git push origin your_created_branch_name`
+8) And then, create a pull request with the changes you have made.
+    - Make sure to add the <i> pull request </i> on the `development` branch of the main repository ( With descriptions )
+
+<br>
+<br>
+
+### Pull Request
+1) Add a short description of what you have changed.
+2) A list of the dependencies of packages required for the changes. ( if need any )
+
+
+<hr>
