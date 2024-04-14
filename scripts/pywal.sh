@@ -188,7 +188,7 @@ fi
 EOF
 
     # Restart Firefox to apply changes
-    pkill firefox
+    # pkill firefox
 fi
 
 
