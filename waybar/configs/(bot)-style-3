@@ -10,7 +10,7 @@
         "margin-top": -6,
         "margin-bottom": 0,
     
-        "modules-left": ["custom/launch_rofi","hyprland/workspaces"],
+        "modules-left": ["custom/launch_rofi","hyprland/workspaces", "cpu", "memory", "disk"],
     
         "modules-center": [],
     

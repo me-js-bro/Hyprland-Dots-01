@@ -134,10 +134,16 @@ tooltip label{
 
 #cpu {
     border-right: none;
+    color: @color4;
 }
 
 #memory {
     border-right: none;
+    color: @color5;
+}
+
+#disk {
+    color: @color8;
 }
 
 #custom-clipboard {

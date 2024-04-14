@@ -90,7 +90,7 @@ toggle_mute() {
 	if [ "$(pamixer --get-mute)" == "false" ]; then
 		pamixer -m && notify-send -e -u low -i "$iDIR/muted-speaker.svg" "Volume Switched OFF"
 	elif [ "$(pamixer --get-mute)" == "true" ]; then
-		pamixer -u && notify-send -e -u low -i "$(get_icon)" "Volume Switched ON"
+		pamixer -u && notify-send -e -u low -i "$iDIR/unmuted-speaker.svg" "Volume Switched ON"
 	fi
 }
 
@@ -99,7 +99,7 @@ toggle_mic() {
 	if [ "$(pamixer --default-source --get-mute)" == "false" ]; then
 		pamixer --default-source -m && notify-send -e -u low -i "$iDIR/muted-mic.svg" "Microphone Switched OFF"
 	elif [ "$(pamixer --default-source --get-mute)" == "true" ]; then
-		pamixer -u --default-source u && notify-send -e -u low -i "$iDIR/unmuted-speaker.svg" "Microphone Switched ON"
+		pamixer -u --default-source u && notify-send -e -u low -i "$iDIR/unmuted-mic.svg" "Microphone Switched ON"
 	fi
 }
 # Get Mic Icon
