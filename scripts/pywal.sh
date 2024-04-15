@@ -116,6 +116,8 @@ if [ -f $colors_file ]; then
         "tab.border": "$background_color",
         "tab.inactiveBackground": "$background_color",
         "tab.inactiveForeground": "$foreground_color",
+        "terminal.foreground": "$foreground_color",
+        "terminal.background": "$background_color"
     },
     "window.menuBarVisibility": "toggle",
     "workbench.statusBar.visible": false,
