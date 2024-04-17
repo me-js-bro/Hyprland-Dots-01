@@ -35,6 +35,9 @@ if [ -f /etc/arch-release ]; then
 
     update_packages() {
         kitty --title systemupdate sh -c "${aurhlpr} -Syu $fpk_exup"
+
+        sleep 3
+
         if [ $upd -eq 0 ] ; then
             notify-send "Packages updated successfully"
         else
@@ -61,10 +64,15 @@ elif [ -f /etc/fedora-release ]; then
 
     update_packages() {
         kitty --title systemupdate sh -c "sudo dnf update -y"
-        if [ $upd -eq 0 ] ; then
+
+        sleep 2
+
+        if ((upd == 0)); then
             notify-send "Packages updated successfully"
+        elif ((upd >= 1)); then
+            notify-send "Some packages were skipped..."
         else
-            notify-send "Couldnot update your packages."
+            notify-send "Could not update your packages."
         fi
 }
 
