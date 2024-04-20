@@ -1,0 +1,44 @@
+{
+        "include": "$HOME/.config/hypr/waybar/modules",
+        "layer": "top",
+        "position": "bottom",
+        "mod": "dock",
+        "exclusive": true,
+        "passthrough": false,
+        "gtk-layer-shell": true,
+        "height": 20,
+        "margin-top": -6,
+        "margin-bottom": 0,
+    
+        "modules-left": ["custom/launch_rofi","hyprland/workspaces", "custom/fb", "custom/yt", "custom/wapp", "custom/ai", "custom/github"],
+    
+        "modules-center": [],
+    
+        "modules-right": ["tray", "custom/updater", "custom/swaync", "mpris", "custom/light_dark","custom/wallpaper-change", "custom/ibus", "pulseaudio","pulseaudio#microphone", "network", "custom/clipboard", "clock","custom/power_btn"],
+   
+       "custom/fb": {
+           "format": " ",
+           "on-click": "~/.config/hypr/scripts/apps.sh fb"
+       },
+   
+       "custom/yt": {
+           "format": " ",
+           "on-click": "~/.config/hypr/scripts/apps.sh yt"
+       },
+   
+       "custom/wapp": {
+           "format": " ",
+           "on-click": "~/.config/hypr/scripts/apps.sh fb"
+       },
+   
+       "custom/ai": {
+           "format": " ",
+           "on-click": "~/.config/hypr/scripts/apps.sh fb"
+       },
+   
+       "custom/github": {
+           "format": " ",
+           "on-click": "~/.config/hypr/scripts/apps.sh github"
+       }
+
+    }

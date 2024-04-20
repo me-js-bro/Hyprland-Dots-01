@@ -18,7 +18,7 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "󰤨 {essid}",
-        "format-ethernet": "",
+        "format-ethernet": "",
         "format-alt": " {bandwidthUpBytes}  {bandwidthDownBytes}",
         "tooltip-format": " {bandwidthUpBytes}  {bandwidthDownBytes}",
         "format-linked": "󱘖 {ifname} (No IP)",
@@ -60,12 +60,12 @@
         // },
         "format-icons": {
             // for arch
-            "active": "󰮯",
-            "default": ""
+            // "active": "󰮯",
+            // "default": ""
 
             // for fedora
-            //  "active": "󰣛",  
-            //  "default": ""
+             "active": "󰣛",  
+             "default": ""
 
             // for opensuse
             //"active": "",
@@ -204,7 +204,7 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": ["", "", " "]
         }
     },
 
@@ -270,8 +270,8 @@
     },
 
     "custom/launch_rofi": {
-        "format": "",   // for arch
-        //  "format": "󰣛",   // for fedora
+        // "format": "",   // for arch
+         "format": "󰣛",   // for fedora
         // "format": "",  // for opensuse
         "on-click": "rofi -n -show drun",
         "on-click-right": "rofi -n -show filebrowser",
