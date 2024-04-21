@@ -9,11 +9,11 @@
     "height": 15,
     "margin-top": -3,
 
-    "modules-left": ["custom/launch_rofi", "custom/fb", "custom/yt", "custom/wapp", "custom/ai", "custom/github", "mpris"],
+    "modules-left": ["custom/launch_rofi", "custom/fb", "custom/wapp", "custom/ai", "custom/github", "mpris", "custom/cava"],
 
     "modules-center": ["hyprland/workspaces"],
 
-    "modules-right": ["tray", "pulseaudio", "custom/updater", "custom/swaync", "custom/clipboard", "network", "clock"],
+    "modules-right": ["tray", "cpu", "memory", "pulseaudio", "custom/updater", "custom/swaync", "custom/clipboard", "network", "clock"],
 
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -21,7 +21,7 @@
         "on-click": "activate",
         "on-scroll-up": "hyprctl dispatch workspace e-1",
         "on-scroll-down": "hyprctl dispatch workspace e+1",
-        "format": "{name}",
+        "format": "",
         "persistent-workspaces": {
             "1": [],
             "2": [],
@@ -48,7 +48,7 @@
 
     "custom/wapp": {
         "format": " ",
-        "on-click": "~/.config/hypr/scripts/apps.sh fb"
+        "on-click": "~/.config/hypr/scripts/apps.sh wapp"
     },
 
     "custom/ai": {

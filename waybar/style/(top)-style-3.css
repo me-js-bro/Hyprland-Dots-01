@@ -11,7 +11,7 @@
 
 window#waybar {
     background: @background;
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
 tooltip {
@@ -28,15 +28,17 @@ tooltip label{
 }
 
 #workspaces button {
-    color: @background;
+    background: @background;
+    opacity: 0.4;
     box-shadow: none;
 	text-shadow: none;
     padding: 0px;
     border-radius: 9px;
     margin-top: 3px;
     margin-bottom: 3px;
-    padding-left: 5px;
-    padding-right: 5px;
+    /* padding-left: 3px;
+    padding-right: 3px; */
+    margin: 0 2px;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
 }
@@ -46,8 +48,8 @@ tooltip label{
     background: @background;
     opacity: 0.8;
     margin-left: 3px;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 7px;
+    padding-right: 7px;
     margin-right: 3px;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
@@ -167,9 +169,19 @@ tooltip label{
 
 #custom-ai, #custom-fb, #custom-yt, #custom-wapp, #custom-github {
     background: @background;
+    color: @foreground;
     padding: 0 5px;
     font-size: 15px;
     transition: 0.3s ease;
+}
+
+#cpu, #memory {
+    background: @background;
+    color: @foreground;
+}
+
+#memory {
+    margin-right: 3px;
 }
 
 #taskbar{
@@ -212,9 +224,9 @@ tooltip label{
 }
 
 #tray {
-    background: #8ba3ca;
+    background: @foreground;
     margin-right: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 #custom-light_dark, #custom-power_btn, #pulseaudio.microphone, #battery, #disk {
@@ -279,6 +291,7 @@ tooltip label{
     background: @foreground;
     color: @background;
     margin: 8px 10px;
+    margin-left: 20px;
     border-radius: 20px;
     font-size: 13px;
 }
@@ -296,7 +309,8 @@ tooltip label{
     color: @background;
     font-weight: 700;
     border-radius: 10px;
-    margin-right: 10px;
+    margin-right: 20px;
+    margin-left: 5px;
     padding-right: 15px;
     border-radius: 20px;
 }
@@ -318,9 +332,8 @@ tooltip label{
 }
 
 #custom-cava {
-    background: #a6e3a1;
-    color: #142429;
-    opacity: 0.8;
+    background: @background;
+    color: @foreground;
     padding: 0px 10px;
     margin: 3px 0px;
     margin-right: 10px;

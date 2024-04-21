@@ -1,1 +1,1 @@
-### You will fine a theme.css file inside the style directory. this file will be generated everytime you seitch a wallpaper.
+### You will find a theme.css file inside the style directory. this file will be generated everytime you seitch a wallpaper.
