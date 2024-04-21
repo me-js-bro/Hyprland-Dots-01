@@ -7,7 +7,7 @@
         "exclusive": true,
         "passthrough": false,
         "gtk-layer-shell": true,
-        "height": 20,
+        "height": 10,
         "margin-top": -5,
         "margin-left": -20,
         "margin-right": -20,
@@ -16,16 +16,7 @@
     
         "modules-center": ["clock"],
     
-        "modules-right": ["tray", "custom/updater", "custom/light_dark","custom/wallpaper-change", "custom/ibus", "pulseaudio", "custom/swaync", "network", "custom/power_btn"],
-    
-        "network": {
-            "format-wifi": "󰤨 {essid}",
-            "format-ethernet": "",
-            "tooltip-format": " {bandwidthUpBytes}  {bandwidthDownBytes}",
-            "format-linked": "󱘖 {ifname} (No IP)",
-            "format-disconnected": " Disconnected",
-            "interval": 5
-        }
+        "modules-right": ["tray", "custom/updater", "custom/light_dark", "pulseaudio", "custom/swaync", "network", "custom/power_btn"]
     },
     
     {
@@ -43,11 +34,53 @@
     
         "modules-left": [],
     
-        "modules-center": ["wlr/taskbar"],
+        "modules-center": ["custom/terminal" ,"custom/browser", "custom/file-man", "custom/fb", "custom/yt", "custom/wapp", "custom/ai", "custom/github"],
     
         "modules-right": [],
 
-        "css": ["$HOME/.config/hypr/waybar/style/mac_bottom.css"]
+        "css": ["$HOME/.config/hypr/waybar/style/mac_bottom.css"],
+
+        "custom/file-man": {
+            "format": " ",
+            "on-click": "thunar"
+        },
+
+        "custom/browser": {
+            "format": " ",
+            "on-click": "brave-browser",
+            "on-click-right": "firefox"
+
+        },
+
+        "custom/terminal": {
+            "format": " ",
+            "on-click": "kitty"
+        },
+
+        "custom/fb": {
+            "format": " ",
+            "on-click": "~/.config/hypr/scripts/apps.sh fb"
+        },
+    
+        "custom/yt": {
+            "format": " ",
+            "on-click": "~/.config/hypr/scripts/apps.sh yt"
+        },
+    
+        "custom/wapp": {
+            "format": " ",
+            "on-click": "~/.config/hypr/scripts/apps.sh fb"
+        },
+    
+        "custom/ai": {
+            "format": " ",
+            "on-click": "~/.config/hypr/scripts/apps.sh fb"
+        },
+    
+        "custom/github": {
+            "format": " ",
+            "on-click": "~/.config/hypr/scripts/apps.sh github"
+        }
     }
         
 ]

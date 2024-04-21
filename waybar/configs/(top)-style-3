@@ -1,0 +1,65 @@
+{
+    "include": "$HOME/.config/hypr/waybar/modules",
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 15,
+    "margin-top": -3,
+
+    "modules-left": ["custom/launch_rofi", "custom/fb", "custom/wapp", "custom/ai", "custom/github", "mpris", "custom/cava"],
+
+    "modules-center": ["hyprland/workspaces"],
+
+    "modules-right": ["tray", "cpu", "memory", "pulseaudio", "custom/updater", "custom/swaync", "custom/clipboard", "network", "clock"],
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch workspace e-1",
+        "on-scroll-down": "hyprctl dispatch workspace e+1",
+        "format": "",
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": []
+        }
+    },
+
+    "custom/launch_rofi": {
+         "format": "Apps",
+        "on-click": "rofi -n -show drun",
+        "on-click-right": "rofi -n -show filebrowser",
+        "tooltip": false
+    },
+
+    "custom/fb": {
+        "format": " ",
+        "on-click": "~/.config/hypr/scripts/apps.sh fb"
+    },
+
+    "custom/yt": {
+        "format": " ",
+        "on-click": "~/.config/hypr/scripts/apps.sh yt"
+    },
+
+    "custom/wapp": {
+        "format": " ",
+        "on-click": "~/.config/hypr/scripts/apps.sh wapp"
+    },
+
+    "custom/ai": {
+        "format": " ",
+        "on-click": "~/.config/hypr/scripts/apps.sh fb"
+    },
+
+    "custom/github": {
+        "format": " ",
+        "on-click": "~/.config/hypr/scripts/apps.sh github"
+    }
+
+
+}

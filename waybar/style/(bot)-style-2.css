@@ -3,65 +3,56 @@
     border-radius: 0;
     font-family: "JetBrainsMono Nerd Font", "MesloLGS Nerd Font", "Font Awesome";
     font-weight: bold;
-    font-size: 13px;
+    font-size: 14px;
     min-height: 0;
 }
 
 @import 'style/theme.css';
 
-#window {
-	padding: 1px 0;
-}
-
 window#waybar {
-    background: @background;
-    opacity: 0.9;
-    color: @color7;
-    border-top: 1px solid @foreground;
-    padding: 0 0;
-    /* margin: 0; */
+    background: rgba(0, 0, 0, 0.479);
+    color: @foreground;
+    margin-bottom: 5px;
 }
 
 tooltip {
     background: @background;
     opacity: 0.8;
-    border-radius: 10px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #9DB8C1;
+    border-radius: 3px;
+    border: 1px solid #9DB8C1;
 }
 
 tooltip label{
-    color: @foreground;
+    color: #9DB8C1;
 }
 
 #workspaces button {
     padding: 5px;
-    color: #4f5064;
+    color: @color3;
     margin-right: 5px;
     background-color: rgba(17, 17, 27, 0);
 }
 
 #workspaces button.active {
-    color: #b8bfdd;
+    color: @color15;
 }
 
 #workspaces button.focused {
     color: #a6adc8;
     background: #eba0ac;
-    border-radius: 10px;
+    border-radius: 3px;
 }
 
 #workspaces button.urgent {
     color: #11111b;
     background: #eba0ac;
-    border-radius: 10px;
+    border-radius: 3px;
 }
 
 #workspaces button:hover {
     background: #11111b;
     color: #cdd6f4;
-    border-radius: 10px;
+    border-radius: 3px;
 }
 
 #taskbar button {
@@ -80,8 +71,8 @@ tooltip label{
 #taskbar button.active {
     background: #324857;
     margin-left: 3px;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin-right: 3px;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
@@ -119,52 +110,108 @@ tooltip label{
 #custom-ibus,
 #taskbar,
 #custom-swaync,
+#custom-ai,
+#custom-fb,
+#custom-yt,
+#custom-wapp,
+#custom-github,
 #mpris,
 #backlight {
-    background: rgba(24, 32, 42, 0);
+    background: @background;;
     opacity: 0.8;
-    padding: 3px 10px;
-    /* padding-bottom: 5px; */
+    padding: 0px 10px;
     margin: 3px 0px;
-    /* margin-top: 10px; */
-    border: 0px;
+    margin-top: 7px;
+    border: 1px solid @foreground;
+}
+
+#mpris {
+    border-radius: 3px;
+    margin-right: 3px;
+    color: @color2;
+}
+
+#custom-swaync {
+    margin-right: 3px;
+    border-radius: 3px;
+    color: @color4;
+}
+
+#cpu {
+    border-right: none;
+    color: @color4;
+}
+
+#memory {
+    border-right: none;
+    color: @color5;
+}
+
+#disk {
+    color: @color8;
 }
 
 #custom-clipboard {
-    border-radius: 0 10px 10px 0;
-    margin-right: 0;
-    font-size: 20px;
-    padding-right: 20px;
+    border-radius: 3px;
+    margin-right: 3px;
+    font-size: 15px;
+    padding-right: 13px;
+    color: @color3;
+}
+
+#custom-ai {
+    color: @color1;
+}
+
+#custom-fb {
+    color: @color2;
+}
+
+#custom-yt {
+    color: @color5;
+}
+
+#custom-wapp {
+
+}
+
+#custom-github {
+    color: @color3;
 }
 
 #custom-wallpaper-change {
     font-size: 16px;
     padding-right: 20px;
-    margin-right: 10px;
-    border-radius: 0 10px 10px 0;
+    margin-right: 3px;
+    border-radius: 0 3px 3px 0;
+    border-left: none;
+    color: @color9;
 }
 
 #taskbar{
-    border-radius: 10px;
+    border-radius: 3px;
 }
 
 #custom-ibus {
-    border-radius: 10px;
-    margin-right: 0;
+    border-radius: 3px;
+    margin-right: 3px;
+    color: @color11;
 }
 
 #network {
-    /* margin-right: 10px; */
-    border-radius: 10px;
+    margin-right: 3px;
+    border-radius: 3px;
+    color: @color4;
 }
 
 #custom-updater {
-    margin-right: 10px;
-    border-radius: 10px;
+    margin-right: 3px;
+    border-radius: 3px;
+    color: @color2;
 }
 
 #tray, #custom-lock_screen, #temperature, #backlight, #custom-launch_rofi, #cpu {
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 3px 0px 0px 3px;
 }
 
 #temperature {
@@ -172,31 +219,32 @@ tooltip label{
 }
 
 #tray {
-    margin-right: 10px;
-    border-radius: 10px;
+    margin-right: 3px;
+    border-radius: 3px;
 }
 
 #custom-light_dark, #custom-power_btn, #workspaces, #pulseaudio.microphone, #battery, #disk {
-    border-radius: 0px 10px 10px 0px;
-    margin-right: 10px;
+    border-radius: 0px 3px 3px 0px;
+    margin-right: 3px;
 }
 
 #custom-power_btn {
-    padding: 0 15px;
-    padding-bottom: 2px;
+    padding: 0 15px 2px 15px;
     color: red;
-    border-radius: 10px;
+    border-left: none;
+    margin-right: 10px;
 }
 
 #custom-light_dark {
-    border-radius: 10px 0 0 10px;
-    padding: 0 15px;
-    padding-right: 5px;
+    border-radius: 3px 0 0 3px;
     margin-right: 0;
+    border-right: none;
+    padding: 0 15px;
+    color: @color6;
 }
 
 #custom-weather {
-    border-radius: 10px;
+    border-radius: 3px;
     margin-left: 10px;
 }
 
@@ -208,8 +256,6 @@ tooltip label{
 #workspaces {
     padding-right: 5px;
     padding-left: 5px;
-    border-radius: 10px;
-    margin-left: 10px;
 }
 
 #custom-power_profile {
@@ -219,32 +265,39 @@ tooltip label{
 }
 
 #window {
-    border-radius: 10px;
+    border-radius: 3px;
     margin-left: 20px;
     margin-right: 20px;
 }
 
 #custom-launch_rofi {
     color: #89b4fa;
-    border-radius: 0;
     font-size: 20px;
+    padding-right: 20px;
+    margin-left: 10px;
+    border-right: none;
 }
 
 #pulseaudio {
     /* color: #89b4fa; */
     border-left: 0px;
     border-right: 0px;
-    border-radius: 10px 0 0 10px;
+    border-radius: 3px 0 0 3px;
+    border: 1px solid @foreground;
+    border-right: none;
 }
 
 #clock {
-    border-radius: 0px;
+    border-radius: 3px 0 0 3px;
+    color: @color3;
 }
 
 #pulseaudio.microphone {
     /* color: #cba6f7; */
     border-left: 0px;
     border-right: 0px;
+    border: 1px solid @foreground;
+    border-left: none;
 }
 
 #battery {
@@ -253,7 +306,7 @@ tooltip label{
 }
 
 #custom-cava {
-    background: #18202A;
+    background: #08080A;
     color: #9DB8C1;
     opacity: 0.8;
     padding: 0px 10px;
@@ -261,5 +314,6 @@ tooltip label{
     margin-right: 10px;
     margin-top: 10px;
     border: 0px;
-    border-radius: 10px;
+    border-radius: 3px;
+    border: 1px solid #9DB8C1;
 }

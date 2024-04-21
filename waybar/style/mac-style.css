@@ -15,8 +15,9 @@
 
 window#waybar {
     background: @background;
+    opacity: 0.8;
     color:@foreground;
-    border: 0.3px solid @foreground;
+    border: 0.6px solid @foreground;
     padding: 0 0;
     border-radius:10px;
 }
@@ -124,10 +125,18 @@ tooltip label{
 #custom-ibus,
 #taskbar,
 #custom-swaync,
+#custom-terminal,
+#custom-browser,
+#custom-file-man,
+#custom-ai,
+#custom-fb,
+#custom-yt,
+#custom-wapp,
+#custom-github,
 #backlight {
     background: rgba(24, 32, 42, 0);
     opacity: 0.8;
-    padding: 3px 10px;
+    padding: 3px 7px;
     /* padding-bottom: 5px; */
     margin: 3px 0px;
     /* margin-top: 10px; */
@@ -148,13 +157,24 @@ tooltip label{
     border-radius: 0 10px 10px 0;
 }
 
+#custom-terminal,
+#custom-browser,
+#custom-file-man,
+#custom-ai,
+#custom-fb,
+#custom-yt,
+#custom-wapp,
+#custom-github {
+    font-size: 15px;
+}
+
 #taskbar{
     border-radius: 10px;
 }
 
 #custom-ibus {
     border-radius: 10px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
 }
 
 #network {
@@ -163,7 +183,7 @@ tooltip label{
 }
 
 #custom-updater {
-    margin-right: 10px;
+    margin-right: -3px;
     border-radius: 10px;
 }
 
@@ -197,7 +217,7 @@ tooltip label{
     border-radius: 10px 0 0 10px;
     padding: 0 15px;
     padding-right: 5px;
-    margin-right: 0;
+    margin-right: 3px;
 }
 
 #custom-weather {
@@ -243,7 +263,13 @@ tooltip label{
 }
 
 #clock {
-    border-radius: 0px;
+    border-radius: 25px;
+    background: @foreground;
+    color: @background;
+    margin: 7px 0;
+    margin-top: 10px;
+    padding: 0 3px;
+    padding-right: 10px;
 }
 
 #pulseaudio.microphone {
