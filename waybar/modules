@@ -126,8 +126,8 @@
     },
 
     "clock": {
-        "format": " {: %I:%M %p}",
-        "format-alt": "{: %d-%m-%Y}",
+        "format": " {:%I:%M %p}",
+        "format-alt": " {:%d-%m-%Y}",
         "on-clock-right": "exec gnome-calendar",
         "tooltip": true,
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
