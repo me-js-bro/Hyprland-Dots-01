@@ -270,9 +270,9 @@
     },
 
     "custom/launch_rofi": {
-        // "format": "",   // for arch
+        "format": "",   // for arch
         //  "format": "󰣛",   // for fedora
-        "format": "",  // for opensuse
+        // "format": "",  // for opensuse
         "on-click": "rofi -n -show drun",
         "on-click-right": "rofi -n -show filebrowser",
         "tooltip": false
