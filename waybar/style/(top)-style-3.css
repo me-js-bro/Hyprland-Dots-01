@@ -175,6 +175,10 @@ tooltip label{
     transition: 0.3s ease;
 }
 
+#custom-ai {
+    padding-bottom: 3px;
+}
+
 #cpu, #memory {
     background: @background;
     color: @foreground;

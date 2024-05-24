@@ -168,6 +168,10 @@ tooltip label{
     font-size: 15px;
 }
 
+#custom-ai {
+    padding-bottom: 3px;
+}
+
 #taskbar{
     border-radius: 10px;
 }
