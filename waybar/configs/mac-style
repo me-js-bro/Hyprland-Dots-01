@@ -55,31 +55,6 @@
         "custom/terminal": {
             "format": " ",
             "on-click": "kitty"
-        },
-
-        "custom/fb": {
-            "format": " ",
-            "on-click": "~/.config/hypr/scripts/apps.sh fb"
-        },
-    
-        "custom/yt": {
-            "format": " ",
-            "on-click": "~/.config/hypr/scripts/apps.sh yt"
-        },
-    
-        "custom/wapp": {
-            "format": " ",
-            "on-click": "~/.config/hypr/scripts/apps.sh fb"
-        },
-    
-        "custom/ai": {
-            "format": " ",
-            "on-click": "~/.config/hypr/scripts/apps.sh fb"
-        },
-    
-        "custom/github": {
-            "format": " ",
-            "on-click": "~/.config/hypr/scripts/apps.sh github"
         }
     }
         

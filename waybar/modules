@@ -270,9 +270,9 @@
     },
 
     "custom/launch_rofi": {
-        // "format": "",   // for arch
+        "format": "",   // for arch
         //  "format": "󰣛",   // for fedora
-        "format": "",  // for opensuse
+        // "format": "",  // for opensuse
         "on-click": "rofi -n -show drun",
         "on-click-right": "rofi -n -show filebrowser",
         "tooltip": false
@@ -410,5 +410,30 @@
         //"exec": "~/.config/waybar/scripts/Weather.py",
         "exec-if": "ping wttr.in -c1",
         "tooltip" : true
+        },
+    
+        "custom/fb": {
+            "format": " ",
+            "on-click": "~/.config/hypr/scripts/apps.sh fb"
+        },
+    
+        "custom/yt": {
+            "format": " ",
+            "on-click": "~/.config/hypr/scripts/apps.sh yt"
+        },
+    
+        "custom/wapp": {
+            "format": " ",
+            "on-click": "~/.config/hypr/scripts/apps.sh wapp"
+        },
+    
+        "custom/ai": {
+            "format": " ",
+            "on-click": "~/.config/hypr/scripts/apps.sh ai"
+        },
+    
+        "custom/github": {
+            "format": " ",
+            "on-click": "~/.config/hypr/scripts/apps.sh github"
         }
 }

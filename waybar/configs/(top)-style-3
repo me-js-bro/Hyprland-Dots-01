@@ -9,7 +9,7 @@
     "height": 15,
     "margin-top": -3,
 
-    "modules-left": ["custom/launch_rofi", "custom/fb", "custom/wapp", "custom/ai", "custom/github", "mpris"],
+    "modules-left": ["custom/launch_rofi", "custom/fb", "custom/yt", "custom/wapp", "custom/ai", "custom/github", "mpris"],
 
     "modules-center": ["hyprland/workspaces"],
 
@@ -30,36 +30,14 @@
     },
 
     "custom/launch_rofi": {
-         "format": "Apps",
+        // "format": "",   // for arch
+        //  "format": "󰣛",   // for fedora
+        // "format": "",  // for opensuse
+        "format": "Apps"
         "on-click": "rofi -n -show drun",
         "on-click-right": "rofi -n -show filebrowser",
         "tooltip": false
     },
-
-    "custom/fb": {
-        "format": " ",
-        "on-click": "~/.config/hypr/scripts/apps.sh fb"
-    },
-
-    "custom/yt": {
-        "format": " ",
-        "on-click": "~/.config/hypr/scripts/apps.sh yt"
-    },
-
-    "custom/wapp": {
-        "format": " ",
-        "on-click": "~/.config/hypr/scripts/apps.sh wapp"
-    },
-
-    "custom/ai": {
-        "format": " ",
-        "on-click": "~/.config/hypr/scripts/apps.sh ai"
-    },
-
-    "custom/github": {
-        "format": " ",
-        "on-click": "~/.config/hypr/scripts/apps.sh github"
-    }
 
 
 }

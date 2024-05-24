@@ -163,6 +163,10 @@ tooltip label{
     color: @color1;
 }
 
+#custom-ai {
+    padding-bottom: 3px;
+}
+
 #custom-fb {
     color: @color2;
 }
