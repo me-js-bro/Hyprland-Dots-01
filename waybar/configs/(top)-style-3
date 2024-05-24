@@ -53,7 +53,7 @@
 
     "custom/ai": {
         "format": " ",
-        "on-click": "~/.config/hypr/scripts/apps.sh fb"
+        "on-click": "~/.config/hypr/scripts/apps.sh ai"
     },
 
     "custom/github": {
