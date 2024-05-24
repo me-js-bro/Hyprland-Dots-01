@@ -92,18 +92,24 @@ elif [ -f /etc/os-release ]; then
         # Show tooltip
         if [ $upd -eq 0 ] ; then
             echo "{\"text\":\"$upd\", \"tooltip\":\" Packages are up to date\"}"
+        # notify-send "\" Packages are up to date\""
         else
-            echo "{\"text\":\"$upd\", \"tooltip\":\"󱓽 Updates $ofc\n\"}"
+            echo "{\"text\":\"$upd\", \"tooltip\":\"󱓽 Updates Available: $upd\"}"
+            notify-send "\"󱓽 Updates Available: $upd\""
         fi
 
         update_packages() {
-                kitty --title systemupdate sh -c "sudo zypper up"
+            kitty --title systemupdate sh -c "sudo zypper up"
+
+            sleep 2
                 
-                if [ $upd -eq 0 ] ; then
-                    dunstify "Packages updated successfully!"
-                else
-                    dunstify "Couldnot update your packages."
-                fi
+            if ((upd == 0)); then
+                notify-send "Packages updated successfully"
+            elif ((upd >= 1)); then
+                notify-send "Some packages were skipped..."
+            else
+                notify-send "Could not update your packages."
+            fi
         }
     fi
 

@@ -9,7 +9,7 @@
     "height": 15,
     "margin-top": -3,
 
-    "modules-left": ["custom/launch_rofi", "custom/fb", "custom/wapp", "custom/ai", "custom/github", "mpris", "custom/cava"],
+    "modules-left": ["custom/launch_rofi", "custom/fb", "custom/wapp", "custom/ai", "custom/github", "mpris"],
 
     "modules-center": ["hyprland/workspaces"],
 
@@ -53,7 +53,7 @@
 
     "custom/ai": {
         "format": " ",
-        "on-click": "~/.config/hypr/scripts/apps.sh fb"
+        "on-click": "~/.config/hypr/scripts/apps.sh ai"
     },
 
     "custom/github": {

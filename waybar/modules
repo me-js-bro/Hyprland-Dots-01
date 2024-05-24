@@ -64,12 +64,12 @@
             // "default": ""
 
             // for fedora
-             "active": "󰣛",  
-             "default": ""
+            //  "active": "󰣛",  
+            //  "default": ""
 
             // for opensuse
-            //"active": "",
-            //"default": ""
+            "active": "",
+            "default": ""
           },
         "persistent-workspaces": {
             "1": [],
@@ -271,8 +271,8 @@
 
     "custom/launch_rofi": {
         // "format": "",   // for arch
-         "format": "󰣛",   // for fedora
-        // "format": "",  // for opensuse
+        //  "format": "󰣛",   // for fedora
+        "format": "",  // for opensuse
         "on-click": "rofi -n -show drun",
         "on-click-right": "rofi -n -show filebrowser",
         "tooltip": false

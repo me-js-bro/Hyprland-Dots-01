@@ -85,6 +85,19 @@ sed -i "s/background .*$/background $kitty_background_color/g" "$kitty"
 sed -i "s/foreground .*$/foreground $kitty_foreground_color/g" "$kitty"
 kitty @ --to=unix:/tmp/kitty.sock quit
 
+# setting rofi theme
+ln -sf ~/.cache/wal/colors-rofi-dark.rasi ~/.config/hypr/rofi/themes/rofi-pywal.rasi
+ln -sf ~/.cache/wal/colors-rofi-light.rasi ~/.config/hypr/rofi/themes/rofi-pywal-light.rasi
+
+# setting waybar colors
+ln -sf ~/.cache/wal/colors-waybar.css ~/.config/hypr/waybar/style/theme.css
+
+# setting waybar colors for wlogout
+ln -sf ~/.cache/wal/colors-waybar.css ~/.config/hypr/wlogout/colors.css
+
+# setting waybar colors for swaync
+ln -sf ~/.cache/wal/colors-waybar.css ~/.config/hypr/swaync/colors.css
+
 # Extract colors from colors.json
 colors_file=~/.cache/wal/colors.json
 if [ -f $colors_file ]; then
@@ -192,19 +205,5 @@ EOF
     # Restart Firefox to apply changes
     # pkill firefox
 fi
-
-
-# setting rofi theme
-ln -sf ~/.cache/wal/colors-rofi-dark.rasi ~/.config/hypr/rofi/themes/rofi-pywal.rasi
-ln -sf ~/.cache/wal/colors-rofi-light.rasi ~/.config/hypr/rofi/themes/rofi-pywal-light.rasi
-
-# setting waybar colors
-ln -sf ~/.cache/wal/colors-waybar.css ~/.config/hypr/waybar/style/theme.css
-
-# setting waybar colors for wlogout
-ln -sf ~/.cache/wal/colors-waybar.css ~/.config/hypr/wlogout/colors.css
-
-# setting waybar colors for swaync
-ln -sf ~/.cache/wal/colors-waybar.css ~/.config/hypr/swaync/colors.css
 
 # ------------------------
