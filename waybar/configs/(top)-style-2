@@ -9,7 +9,7 @@
     "height": 20,
     "margin-top": -5,
 
-    "modules-left": ["wlr/taskbar", "clock", "custom/light_dark","custom/wallpaper-change", "custom/cava"],
+    "modules-left": ["wlr/taskbar", "clock", "custom/light_dark","custom/wallpaper-change"],
 
     "modules-center": ["hyprland/workspaces"],
 
