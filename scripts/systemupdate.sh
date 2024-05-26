@@ -80,11 +80,9 @@ elif [ -f /etc/fedora-release ]; then
 elif [ -f /etc/os-release ]; then
     source /etc/os-release
     if [[ $ID == "opensuse-tumbleweed" ]]; then
-        # Use zypper list-updates to get the list of available updates
-        updates=$(zypper lu)
 
         # Count the number of available updates
-        ofc=$(echo "$updates" | grep -c "v |")
+        ofc=$(zypper lu --best-effort | grep -c 'v |')
 
         # Calculate total available updates
         upd=$(( ofc ))
