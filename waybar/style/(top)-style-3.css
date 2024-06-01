@@ -11,7 +11,7 @@
 
 window#waybar {
     background: @background;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 tooltip {
@@ -81,7 +81,7 @@ tooltip label{
     box-shadow: none;
 	text-shadow: none;
     padding: 0px;
-    border-radius: 9px;
+    border-radius: 5px;
     margin-top: 3px;
     margin-bottom: 3px;
     padding-left: 3px;
@@ -171,13 +171,35 @@ tooltip label{
     background: @background;
     color: @foreground;
     padding: 0 5px;
-    font-size: 15px;
     transition: 0.3s ease;
+}
+
+#custom-fb, #custom-yt, #custom-wappp {
+    font-size: 15px;
+}
+
+#custom-wapp {
+    font-size: 16px;
+}
+
+#custom-ai, #custom-github {
+    border: 2px solid @foreground;
 }
 
 #custom-ai {
     padding-bottom: 3px;
+    padding-left: 8px;
+    border-right: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
+
+#custom-github {
+    border-left: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
 
 #cpu, #memory {
     background: @background;
@@ -195,8 +217,8 @@ tooltip label{
 }
 
 #mpris {
-    background: @foreground;
-    color: @background;
+    background: @background;
+    color: @foreground;
     border-radius: 20px;
     margin-left: 5px;
 }
@@ -224,7 +246,10 @@ tooltip label{
 }
 
 #temperature {
-    border-radius: 0 10px 10px 0;
+    background: @background;
+    color: @foreground;
+    margin-left: 5px;
+    border-radius: 20px;
 }
 
 #tray {
@@ -263,8 +288,10 @@ tooltip label{
 }
 
 #custom-weather {
-    border-radius: 10px;
-    margin-left: 10px;
+    background: @background;
+    color: @foreground;
+    margin-left: 5px;
+    border-radius: 20px;
 }
 
 #temperature.critical {
@@ -275,7 +302,7 @@ tooltip label{
 #workspaces {
     background: @foreground;
     color: @background;
-    padding: 2px 0;
+    padding: 2px 5px;
     border-radius: 20px;
 }
 
@@ -301,10 +328,11 @@ tooltip label{
 }
 
 #pulseaudio {
-    background: @foreground;
-    color: @background;
-    border-left: 0px;
-    border-right: 0px;
+    background: rgba(0, 0, 0, 0);
+    border: 2px solid @foreground;
+    color: @foreground;
+    /* border-left: 0px; */
+    /* border-right: 0px; */
     border-radius: 20px;
 }
 
