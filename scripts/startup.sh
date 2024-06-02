@@ -26,5 +26,3 @@ sleep 0.5
 ${scriptsDir}/pywal.sh
 sleep 0.2
 ${scriptsDir}/Refresh.sh
-
-sleep 2 && ~/.config/hypr/scripts/notify.sh &
