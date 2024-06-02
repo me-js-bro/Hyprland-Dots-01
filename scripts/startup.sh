@@ -23,6 +23,6 @@ else
 fi
 
 sleep 0.5
-${SCRIPTSDIR}/pywal.sh
+${scriptsDir}/pywal.sh
 sleep 0.2
-${SCRIPTSDIR}/Refresh.sh
+${scriptsDir}/Refresh.sh

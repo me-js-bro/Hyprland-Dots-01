@@ -3,7 +3,7 @@
     border-radius: 0;
     font-family: "JetBrainsMono Nerd Font", "MesloLGS Nerd Font", "Font Awesome";
     font-weight: bold;
-    font-size: 13px;
+    font-size: 12px;
     min-height: 0;
 }
 
@@ -32,12 +32,10 @@ tooltip label{
     opacity: 0.4;
     box-shadow: none;
 	text-shadow: none;
-    padding: 0px;
+    padding: 0;
     border-radius: 9px;
     margin-top: 3px;
     margin-bottom: 3px;
-    /* padding-left: 3px;
-    padding-right: 3px; */
     margin: 0 2px;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
@@ -48,8 +46,8 @@ tooltip label{
     background: @background;
     opacity: 0.8;
     margin-left: 3px;
-    padding-left: 7px;
-    padding-right: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-right: 3px;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
@@ -62,8 +60,8 @@ tooltip label{
 }
 
 #workspaces button.urgent {
-    color: #11111b;
-    background: #eba0ac;
+    color: @color5;
+    background: red;
     border-radius: 10px;
 }
 
@@ -145,6 +143,7 @@ tooltip label{
     margin-top: 8px;
     margin-bottom: 6px;
     border: 0px;
+    font-size: 14px;
 }
 
 #custom-swaync {
@@ -298,11 +297,10 @@ tooltip label{
     color: #e92d4d;
 }
 
-
 #workspaces {
     background: @foreground;
     color: @background;
-    padding: 2px 5px;
+    padding: 5px 3px;
     border-radius: 20px;
 }
 
