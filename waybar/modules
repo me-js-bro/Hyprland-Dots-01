@@ -60,16 +60,16 @@
         // },
         "format-icons": {
             // for arch
-            // "active": "󰮯",
-            // "default": ""
+            "active": "󰮯",
+            "default": ""
 
             // for fedora
             //  "active": "󰣛",  
             //  "default": ""
 
             // for opensuse
-            "active": "",
-            "default": ""
+            // "active": "",
+            // "default": ""
           },
         "persistent-workspaces": {
             "1": [],
