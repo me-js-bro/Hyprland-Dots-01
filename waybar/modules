@@ -60,16 +60,16 @@
         // },
         "format-icons": {
             // for arch
-            // "active": "󰮯",
-            // "default": ""
+            "active": "󰮯",
+            "default": ""
 
             // for fedora
             //  "active": "󰣛",  
             //  "default": ""
 
             // for opensuse
-            "active": "",
-            "default": ""
+            // "active": "",
+            // "default": ""
           },
         "persistent-workspaces": {
             "1": [],
@@ -429,7 +429,8 @@
     
         "custom/ai": {
             "format": " ",
-            "on-click": "~/.config/hypr/scripts/apps.sh ai"
+            "on-click": "~/.config/hypr/scripts/apps.sh ai",
+            "on-click-right": "~/.config/hypr/scripts/app.sh gem"
         },
     
         "custom/github": {

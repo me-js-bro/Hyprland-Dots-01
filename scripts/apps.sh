@@ -10,6 +10,9 @@ case $1 in
     ai)
         url="https://chat.openai.com"
         ;;
+    gem)
+	    url="https://gemini.google.com/app"
+	    ;;
     wapp)
         url="https://web.whatsapp.com"
         ;;
