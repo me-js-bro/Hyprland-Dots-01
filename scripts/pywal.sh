@@ -51,14 +51,18 @@ colors_file=~/.cache/wal/colors.json
 if [ -f $colors_file ]; then
     background_color=$(jq -r '.special.background' "$colors_file")
     foreground_color=$(jq -r '.special.foreground' "$colors_file")
+    other_color=$(jq -r '.colors.color5' "$colors_file")
 
   # Usage example
     hex_color="$foreground_color"
+    hex_color_other="$other_color"
     rgba_color=$(hex_to_rgba $hex_color)
+    rgba_color_other=$(hex_to_rgba $hex_color_other)
 
     # Set Hyprland active border color based on foreground color
     hyprland_config=~/.config/hypr/configs/settings.conf
     sed -i "s/col.active_border .*$/col.active_border = $rgba_color/g" "$hyprland_config"
+    sed -i "s/col.inactive_border .*$/col.inactive_border = $rgba_color_other/g" "$hyprland_config"
 
     # Reload Hyprland configuration (optional)
     hyprctl reload
