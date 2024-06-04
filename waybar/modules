@@ -430,7 +430,7 @@
         "custom/ai": {
             "format": " ",
             "on-click": "~/.config/hypr/scripts/apps.sh ai",
-            "on-click-right": "~/.config/hypr/scripts/app.sh gem"
+            "on-click-right": "~/.config/hypr/scripts/apps.sh gem"
         },
     
         "custom/github": {
