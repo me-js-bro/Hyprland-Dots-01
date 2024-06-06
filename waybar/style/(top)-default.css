@@ -167,8 +167,13 @@ tooltip label{
     border-radius: 10px;
 }
 
-#tray, #custom-lock_screen, #temperature, #backlight, #custom-launch_rofi, #cpu {
+#tray, #temperature, #backlight, #custom-launch_rofi, #cpu {
     border-radius: 10px 0px 0px 10px;
+}
+
+#custom-lock_screen {
+    border-radius: 10px;
+    padding-right: 13px;
 }
 
 #temperature {

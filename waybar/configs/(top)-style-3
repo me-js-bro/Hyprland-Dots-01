@@ -9,7 +9,7 @@
     "height": 10,
     "margin-top": -3,
 
-    "modules-left": ["custom/launch_rofi", "custom/fb", "custom/yt", "custom/wapp", "custom/ai", "custom/github", "custom/weather", "mpris"],
+    "modules-left": ["custom/launch_rofi", "custom/fb", "custom/yt", "custom/wapp", "custom/ps", "custom/ai", "custom/github", "custom/weather", "mpris"],
 
     "modules-center": ["hyprland/workspaces"],
 

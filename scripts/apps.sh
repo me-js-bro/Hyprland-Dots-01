@@ -19,6 +19,9 @@ case $1 in
     github)
         url="https://github.com"
         ;;
+    ps)
+        url="https://www.photopea.com/"
+        ;;
     *)
         echo "Usage: $0 {fb|yt|ai|wapp|github}"
         exit 1
