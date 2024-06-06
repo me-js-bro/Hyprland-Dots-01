@@ -10,11 +10,19 @@
         "margin-top": -6,
         "margin-bottom": 0,
     
-        "modules-left": ["custom/launch_rofi","hyprland/workspaces", "custom/fb", "custom/yt", "custom/wapp", "custom/ai", "custom/github"],
+        "modules-left": ["custom/launch_rofi","hyprland/workspaces", "custom/fb", "custom/yt", "custom/wapp", "custom/ps", "custom/ai", "custom/github"],
     
         "modules-center": [],
     
         "modules-right": ["tray", "custom/updater", "custom/swaync", "mpris", "custom/light_dark","custom/wallpaper-change", "custom/ibus", "pulseaudio","pulseaudio#microphone", "network", "custom/clipboard", "clock","custom/power_btn"],
-   
 
+        "custom/launch_rofi": {
+            "format": "",
+            // "format": "",   // for arch
+            //  "format": "󰣛",   // for fedora
+            // "format": "",  // for opensuse
+            "on-click": "rofi -n -show drun",
+            "on-click-right": "rofi -n -show filebrowser",
+            "tooltip": false
+        }
     }

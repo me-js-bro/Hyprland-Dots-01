@@ -132,6 +132,7 @@ tooltip label{
 #mpris,
 #custom-swaync,
 #custom-ai,
+#custom-ps,
 #custom-fb,
 #custom-yt,
 #custom-wapp,
@@ -166,18 +167,22 @@ tooltip label{
     border-radius: 0 10px 10px 0;
 }
 
-#custom-ai, #custom-fb, #custom-yt, #custom-wapp, #custom-github {
+#custom-ai, #custom-fb, #custom-yt, #custom-wapp, #custom-ps, #custom-github {
     background: @background;
     color: @foreground;
     padding: 0 5px;
     transition: 0.3s ease;
 }
 
+#custom-ps {
+    margin-left: -2px;
+}
+
 #custom-fb, #custom-yt, #custom-wappp {
     font-size: 15px;
 }
 
-#custom-wapp {
+#custom-wapp, #custom-ps {
     font-size: 16px;
 }
 
